@@ -1,0 +1,2716 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_18453a66dea74158854cc19116e0586d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+             <h3 align="center" style="font-size:20px;text-transform: capitalize"><b>Broadband speed & ranking</b></h3>
+             
+    
+            <div class="folium-map" id="map_18453a66dea74158854cc19116e0586d" ></div>
+        
+</body>
+<script>    
+    
+            var map_18453a66dea74158854cc19116e0586d = L.map(
+                "map_18453a66dea74158854cc19116e0586d",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_46e9e4fca4034281aefd68cb5b0b61f4 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_18453a66dea74158854cc19116e0586d);
+        
+    
+            var marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74 = L.markerClusterGroup(
+                {}
+            );
+            map_18453a66dea74158854cc19116e0586d.addLayer(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+            var circle_marker_8861e119d66d4a4e8544f4f3da0ad2fe = L.circleMarker(
+                [1.357107, 103.8194992],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_26224b8789df4d2f9f509e5081ae001f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_140fa40b792b4466a580e05e70bcc540 = $(`<div id="html_140fa40b792b4466a580e05e70bcc540" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Singapore</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>2              <p style='color:#FC766AFF'>Speed(mbps):</p>192.01                    </body>                     </html>               </div>`)[0];
+            popup_26224b8789df4d2f9f509e5081ae001f.setContent(html_140fa40b792b4466a580e05e70bcc540);
+        
+
+        circle_marker_8861e119d66d4a4e8544f4f3da0ad2fe.bindPopup(popup_26224b8789df4d2f9f509e5081ae001f)
+        ;
+
+        
+    
+    
+            var circle_marker_b1cb0f12e02f4304b684b8782997a6a7 = L.circleMarker(
+                [-31.7613365, -71.3187697],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_0efc670a9f834990881c94d3345a3982 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e262cb324b91429a8c0548314ce38def = $(`<div id="html_e262cb324b91429a8c0548314ce38def" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Chile</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>3              <p style='color:#FC766AFF'>Speed(mbps):</p>189.36                    </body>                     </html>               </div>`)[0];
+            popup_0efc670a9f834990881c94d3345a3982.setContent(html_e262cb324b91429a8c0548314ce38def);
+        
+
+        circle_marker_b1cb0f12e02f4304b684b8782997a6a7.bindPopup(popup_0efc670a9f834990881c94d3345a3982)
+        ;
+
+        
+    
+    
+            var circle_marker_9a7dca78e56c4d9992c39a2a2b580a29 = L.circleMarker(
+                [14.8971921, 100.83273],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_ede8083465ea44668e556717021549cb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_11df8444d92f402e9c071e202d44b9e8 = $(`<div id="html_11df8444d92f402e9c071e202d44b9e8" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Thailand</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>4              <p style='color:#FC766AFF'>Speed(mbps):</p>184.03                    </body>                     </html>               </div>`)[0];
+            popup_ede8083465ea44668e556717021549cb.setContent(html_11df8444d92f402e9c071e202d44b9e8);
+        
+
+        circle_marker_9a7dca78e56c4d9992c39a2a2b580a29.bindPopup(popup_ede8083465ea44668e556717021549cb)
+        ;
+
+        
+    
+    
+            var circle_marker_d37c4d864b7c4db6b43f934eb420f38d = L.circleMarker(
+                [22.350627, 114.1849161],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_489eaf2d77c3437f9943000fb8abc636 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ddfc27a7ecb24868aeb8d8325607ac1c = $(`<div id="html_ddfc27a7ecb24868aeb8d8325607ac1c" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Hong Kong (SAR)</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>5              <p style='color:#FC766AFF'>Speed(mbps):</p>173.42                    </body>                     </html>               </div>`)[0];
+            popup_489eaf2d77c3437f9943000fb8abc636.setContent(html_ddfc27a7ecb24868aeb8d8325607ac1c);
+        
+
+        circle_marker_d37c4d864b7c4db6b43f934eb420f38d.bindPopup(popup_489eaf2d77c3437f9943000fb8abc636)
+        ;
+
+        
+    
+    
+            var circle_marker_6debf2d699e6476fa0493d5069ad204b = L.circleMarker(
+                [55.670249, 10.3333283],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_50822ceced174a4580b696781e9cffef = L.popup({"maxWidth": "100%"});
+
+        
+            var html_27229bd4e6b1428e9cb25d2b1d3a6dfe = $(`<div id="html_27229bd4e6b1428e9cb25d2b1d3a6dfe" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Denmark</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>6              <p style='color:#FC766AFF'>Speed(mbps):</p>163.6                    </body>                     </html>               </div>`)[0];
+            popup_50822ceced174a4580b696781e9cffef.setContent(html_27229bd4e6b1428e9cb25d2b1d3a6dfe);
+        
+
+        circle_marker_6debf2d699e6476fa0493d5069ad204b.bindPopup(popup_50822ceced174a4580b696781e9cffef)
+        ;
+
+        
+    
+    
+            var circle_marker_8bb2fbe7d7454feb8d01fea14d55c5de = L.circleMarker(
+                [22.3204742, 113.9496263],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_106b7f244c1443f792d46a6a01e2daaf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ddd1c5a524844d928b7f79bb2d6de07e = $(`<div id="html_ddd1c5a524844d928b7f79bb2d6de07e" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Macau (SAR)</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>7              <p style='color:#FC766AFF'>Speed(mbps):</p>156.73                    </body>                     </html>               </div>`)[0];
+            popup_106b7f244c1443f792d46a6a01e2daaf.setContent(html_ddd1c5a524844d928b7f79bb2d6de07e);
+        
+
+        circle_marker_8bb2fbe7d7454feb8d01fea14d55c5de.bindPopup(popup_106b7f244c1443f792d46a6a01e2daaf)
+        ;
+
+        
+    
+    
+            var circle_marker_fe7babdf349a4d43aa92ce7c7009f758 = L.circleMarker(
+                [35.000074, 104.999927],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_352ffb3ed05e4428a13bb2f3260eecbd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e35ab9ddce2471e83fe97e06a0dd65a = $(`<div id="html_8e35ab9ddce2471e83fe97e06a0dd65a" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>China</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>8              <p style='color:#FC766AFF'>Speed(mbps):</p>155.79                    </body>                     </html>               </div>`)[0];
+            popup_352ffb3ed05e4428a13bb2f3260eecbd.setContent(html_8e35ab9ddce2471e83fe97e06a0dd65a);
+        
+
+        circle_marker_fe7babdf349a4d43aa92ce7c7009f758.bindPopup(popup_352ffb3ed05e4428a13bb2f3260eecbd)
+        ;
+
+        
+    
+    
+            var circle_marker_b10af73ae9f64088b32bbf1d43d11292 = L.circleMarker(
+                [39.7837304, -100.445882],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_71d77135347b455d9138d461285dfdfa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_50632d59a24e460fad25ba1809a8be5b = $(`<div id="html_50632d59a24e460fad25ba1809a8be5b" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>United States</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>9              <p style='color:#FC766AFF'>Speed(mbps):</p>143.76                    </body>                     </html>               </div>`)[0];
+            popup_71d77135347b455d9138d461285dfdfa.setContent(html_50632d59a24e460fad25ba1809a8be5b);
+        
+
+        circle_marker_b10af73ae9f64088b32bbf1d43d11292.bindPopup(popup_71d77135347b455d9138d461285dfdfa)
+        ;
+
+        
+    
+    
+            var circle_marker_ca6abdab01be48e997d6d28c9680d25c = L.circleMarker(
+                [39.3260685, -4.8379791],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_202de7079eab4c168ea00580f93b2680 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f557fb0408164d418e1ffa347115cea2 = $(`<div id="html_f557fb0408164d418e1ffa347115cea2" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Spain</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>10              <p style='color:#FC766AFF'>Speed(mbps):</p>134.19                    </body>                     </html>               </div>`)[0];
+            popup_202de7079eab4c168ea00580f93b2680.setContent(html_f557fb0408164d418e1ffa347115cea2);
+        
+
+        circle_marker_ca6abdab01be48e997d6d28c9680d25c.bindPopup(popup_202de7079eab4c168ea00580f93b2680)
+        ;
+
+        
+    
+    
+            var circle_marker_61e403ba9d104d619810803b2083d537 = L.circleMarker(
+                [45.9852129, 24.6859225],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_58fb2e753135425798eac0d3de7da50a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5b82875094a34983914356ca135cea30 = $(`<div id="html_5b82875094a34983914356ca135cea30" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Romania</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>11              <p style='color:#FC766AFF'>Speed(mbps):</p>127.07                    </body>                     </html>               </div>`)[0];
+            popup_58fb2e753135425798eac0d3de7da50a.setContent(html_5b82875094a34983914356ca135cea30);
+        
+
+        circle_marker_61e403ba9d104d619810803b2083d537.bindPopup(popup_58fb2e753135425798eac0d3de7da50a)
+        ;
+
+        
+    
+    
+            var circle_marker_3705ef29132b45f4adb9d97cfb389c5e = L.circleMarker(
+                [-41.5000831, 172.8344077],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_c22142c8c1b04fee99ebcceb97469522 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_41d1dca265144cd089bb8d9f076260d9 = $(`<div id="html_41d1dca265144cd089bb8d9f076260d9" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>New Zealand</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>13              <p style='color:#FC766AFF'>Speed(mbps):</p>113.14                    </body>                     </html>               </div>`)[0];
+            popup_c22142c8c1b04fee99ebcceb97469522.setContent(html_41d1dca265144cd089bb8d9f076260d9);
+        
+
+        circle_marker_3705ef29132b45f4adb9d97cfb389c5e.bindPopup(popup_c22142c8c1b04fee99ebcceb97469522)
+        ;
+
+        
+    
+    
+            var circle_marker_e4a4512ca29d47dfa13fcb441b30fc1d = L.circleMarker(
+                [36.5748441, 139.2394179],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_09777e3a40734f56b832dbbde0ba0877 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0160aadf238947e59a48e0ea5b98dfa0 = $(`<div id="html_0160aadf238947e59a48e0ea5b98dfa0" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Japan</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>14              <p style='color:#FC766AFF'>Speed(mbps):</p>112.9                    </body>                     </html>               </div>`)[0];
+            popup_09777e3a40734f56b832dbbde0ba0877.setContent(html_0160aadf238947e59a48e0ea5b98dfa0);
+        
+
+        circle_marker_e4a4512ca29d47dfa13fcb441b30fc1d.bindPopup(popup_09777e3a40734f56b832dbbde0ba0877)
+        ;
+
+        
+    
+    
+            var circle_marker_e448738c0d0d43e790e92039054362f0 = L.circleMarker(
+                [24.0002488, 53.9994829],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_a09cdb2439f2448a986717742cf311fb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1874bdf2c13d4771949e8b09552ab074 = $(`<div id="html_1874bdf2c13d4771949e8b09552ab074" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>United Arab Emirates</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>15              <p style='color:#FC766AFF'>Speed(mbps):</p>111.79                    </body>                     </html>               </div>`)[0];
+            popup_a09cdb2439f2448a986717742cf311fb.setContent(html_1874bdf2c13d4771949e8b09552ab074);
+        
+
+        circle_marker_e448738c0d0d43e790e92039054362f0.bindPopup(popup_a09cdb2439f2448a986717742cf311fb)
+        ;
+
+        
+    
+    
+            var circle_marker_fdae7178a23b4335a388fdddc69f13c8 = L.circleMarker(
+                [46.7985624, 8.2319736],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_5e526141d5dd47e1be79e6eb3c364e02 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_48a9578d2b004ab78f93f2527c8cb680 = $(`<div id="html_48a9578d2b004ab78f93f2527c8cb680" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Switzerland</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>16              <p style='color:#FC766AFF'>Speed(mbps):</p>110.3                    </body>                     </html>               </div>`)[0];
+            popup_5e526141d5dd47e1be79e6eb3c364e02.setContent(html_48a9578d2b004ab78f93f2527c8cb680);
+        
+
+        circle_marker_fdae7178a23b4335a388fdddc69f13c8.bindPopup(popup_5e526141d5dd47e1be79e6eb3c364e02)
+        ;
+
+        
+    
+    
+            var circle_marker_aa842083a7ec410abe800cc885142167 = L.circleMarker(
+                [60.5000209, 9.0999715],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_997f567da9cd403ebb36f4ac42aefa6f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8c831cace1154c05bf1bac1de04b8e2f = $(`<div id="html_8c831cace1154c05bf1bac1de04b8e2f" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Norway</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>17              <p style='color:#FC766AFF'>Speed(mbps):</p>105.61                    </body>                     </html>               </div>`)[0];
+            popup_997f567da9cd403ebb36f4ac42aefa6f.setContent(html_8c831cace1154c05bf1bac1de04b8e2f);
+        
+
+        circle_marker_aa842083a7ec410abe800cc885142167.bindPopup(popup_997f567da9cd403ebb36f4ac42aefa6f)
+        ;
+
+        
+    
+    
+            var circle_marker_90e29bb62a474174923bded2d781934a = L.circleMarker(
+                [52.2288689, 5.3214503],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_96fb841fc7814dfb97547951cb4b0a69 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_783f2ba4981d44cb83192fddc26d5bf5 = $(`<div id="html_783f2ba4981d44cb83192fddc26d5bf5" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Netherlands</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>18              <p style='color:#FC766AFF'>Speed(mbps):</p>102.6                    </body>                     </html>               </div>`)[0];
+            popup_96fb841fc7814dfb97547951cb4b0a69.setContent(html_783f2ba4981d44cb83192fddc26d5bf5);
+        
+
+        circle_marker_90e29bb62a474174923bded2d781934a.bindPopup(popup_96fb841fc7814dfb97547951cb4b0a69)
+        ;
+
+        
+    
+    
+            var circle_marker_dcfd81fd3bf14a9ea76f787322d94c0f = L.circleMarker(
+                [59.6749712, 14.5208584],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_7feadee1a2ec429898074ad2f2cb13d1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_da7cfcfe766c4636a97e6e2d1bae0872 = $(`<div id="html_da7cfcfe766c4636a97e6e2d1bae0872" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Sweden</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>19              <p style='color:#FC766AFF'>Speed(mbps):</p>102.08                    </body>                     </html>               </div>`)[0];
+            popup_7feadee1a2ec429898074ad2f2cb13d1.setContent(html_da7cfcfe766c4636a97e6e2d1bae0872);
+        
+
+        circle_marker_dcfd81fd3bf14a9ea76f787322d94c0f.bindPopup(popup_7feadee1a2ec429898074ad2f2cb13d1)
+        ;
+
+        
+    
+    
+            var circle_marker_aba0b2864ccd47dfb3a7d9437cca1d71 = L.circleMarker(
+                [47.1817585, 19.5060937],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_618d5ea60d3340bba31f99b7e8ef729a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_daf5b8842078498d859cbb96b2a2fee9 = $(`<div id="html_daf5b8842078498d859cbb96b2a2fee9" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Hungary</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>20              <p style='color:#FC766AFF'>Speed(mbps):</p>100.65                    </body>                     </html>               </div>`)[0];
+            popup_618d5ea60d3340bba31f99b7e8ef729a.setContent(html_daf5b8842078498d859cbb96b2a2fee9);
+        
+
+        circle_marker_aba0b2864ccd47dfb3a7d9437cca1d71.bindPopup(popup_618d5ea60d3340bba31f99b7e8ef729a)
+        ;
+
+        
+    
+    
+            var circle_marker_a19c1a1ed02448a69653b8a70f3d9bed = L.circleMarker(
+                [61.0666922, -107.991707],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_da0f3160cee148d092bdb1746e2fea28 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7b10a3cdea004ecca3367120077ecfe8 = $(`<div id="html_7b10a3cdea004ecca3367120077ecfe8" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Canada</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>21              <p style='color:#FC766AFF'>Speed(mbps):</p>100.06                    </body>                     </html>               </div>`)[0];
+            popup_da0f3160cee148d092bdb1746e2fea28.setContent(html_7b10a3cdea004ecca3367120077ecfe8);
+        
+
+        circle_marker_a19c1a1ed02448a69653b8a70f3d9bed.bindPopup(popup_da0f3160cee148d092bdb1746e2fea28)
+        ;
+
+        
+    
+    
+            var circle_marker_2474bb85ab4d441f9cc5c770ecdb3f9f = L.circleMarker(
+                [40.0332629, -7.8896263],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_c1c9b7ff1f0d4b3ba51362fd99e94ce9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c635d211ac21497d99ebd18cedf6f1da = $(`<div id="html_c635d211ac21497d99ebd18cedf6f1da" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Portugal</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>22              <p style='color:#FC766AFF'>Speed(mbps):</p>99.62                    </body>                     </html>               </div>`)[0];
+            popup_c1c9b7ff1f0d4b3ba51362fd99e94ce9.setContent(html_c635d211ac21497d99ebd18cedf6f1da);
+        
+
+        circle_marker_2474bb85ab4d441f9cc5c770ecdb3f9f.bindPopup(popup_c1c9b7ff1f0d4b3ba51362fd99e94ce9)
+        ;
+
+        
+    
+    
+            var circle_marker_a372255db2f544608d9a458a9dc6433e = L.circleMarker(
+                [36.638392, 127.6961188],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_b82569b6adf749a9a308ffc2ceee63c5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0dbf87e7732f4c658fc2ad4d144042ea = $(`<div id="html_0dbf87e7732f4c658fc2ad4d144042ea" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>South Korea</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>23              <p style='color:#FC766AFF'>Speed(mbps):</p>99.59                    </body>                     </html>               </div>`)[0];
+            popup_b82569b6adf749a9a308ffc2ceee63c5.setContent(html_0dbf87e7732f4c658fc2ad4d144042ea);
+        
+
+        circle_marker_a372255db2f544608d9a458a9dc6433e.bindPopup(popup_b82569b6adf749a9a308ffc2ceee63c5)
+        ;
+
+        
+    
+    
+            var circle_marker_d696b1324e9e455e869fa2641f626212 = L.circleMarker(
+                [29.2733964, 47.4979476],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_c349be43123a45c48a193148562e7f3e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_74cf848e1f8c417ab061a7a3ca8ba338 = $(`<div id="html_74cf848e1f8c417ab061a7a3ca8ba338" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Kuwait</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>24              <p style='color:#FC766AFF'>Speed(mbps):</p>96.93                    </body>                     </html>               </div>`)[0];
+            popup_c349be43123a45c48a193148562e7f3e.setContent(html_74cf848e1f8c417ab061a7a3ca8ba338);
+        
+
+        circle_marker_d696b1324e9e455e869fa2641f626212.bindPopup(popup_c349be43123a45c48a193148562e7f3e)
+        ;
+
+        
+    
+    
+            var circle_marker_66802fad1beb4a29876f0e74df46c703 = L.circleMarker(
+                [23.9739374, 120.9820179],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_7f6e90d7749043ee9dd669b6198e639f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_803f277edd434db1b96cbf0f503810ac = $(`<div id="html_803f277edd434db1b96cbf0f503810ac" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Taiwan</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>25              <p style='color:#FC766AFF'>Speed(mbps):</p>96.82                    </body>                     </html>               </div>`)[0];
+            popup_7f6e90d7749043ee9dd669b6198e639f.setContent(html_803f277edd434db1b96cbf0f503810ac);
+        
+
+        circle_marker_66802fad1beb4a29876f0e74df46c703.bindPopup(popup_7f6e90d7749043ee9dd669b6198e639f)
+        ;
+
+        
+    
+    
+            var circle_marker_36477defcb53423ab3d173514feebe19 = L.circleMarker(
+                [8.559559, -81.1308434],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_96967f0e8aae40d89fe8a8689cf2bd73 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a54b817b8a7943a7b9edd1c29209f11c = $(`<div id="html_a54b817b8a7943a7b9edd1c29209f11c" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Panama</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>26              <p style='color:#FC766AFF'>Speed(mbps):</p>94.51                    </body>                     </html>               </div>`)[0];
+            popup_96967f0e8aae40d89fe8a8689cf2bd73.setContent(html_a54b817b8a7943a7b9edd1c29209f11c);
+        
+
+        circle_marker_36477defcb53423ab3d173514feebe19.bindPopup(popup_96967f0e8aae40d89fe8a8689cf2bd73)
+        ;
+
+        
+    
+    
+            var circle_marker_43bdbbe61a8f46d2a33b4f7e4ecca075 = L.circleMarker(
+                [46.603354, 1.8883335],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_8cf128d649a1478db80afe1d40a3ddb3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_77cd1ede511a490091ae65b6ba6cbe88 = $(`<div id="html_77cd1ede511a490091ae65b6ba6cbe88" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>France</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>27              <p style='color:#FC766AFF'>Speed(mbps):</p>94.34                    </body>                     </html>               </div>`)[0];
+            popup_8cf128d649a1478db80afe1d40a3ddb3.setContent(html_77cd1ede511a490091ae65b6ba6cbe88);
+        
+
+        circle_marker_43bdbbe61a8f46d2a33b4f7e4ecca075.bindPopup(popup_8cf128d649a1478db80afe1d40a3ddb3)
+        ;
+
+        
+    
+    
+            var circle_marker_07fbaf28de004a99ba489efce8568aba = L.circleMarker(
+                [47.2879608, 28.5670941],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_d8fe7e2777634603abb75bec35bc1b17 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a8bb3dd41fb54f5ab104e88d10936b0b = $(`<div id="html_a8bb3dd41fb54f5ab104e88d10936b0b" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Moldova</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>29              <p style='color:#FC766AFF'>Speed(mbps):</p>92.4                    </body>                     </html>               </div>`)[0];
+            popup_d8fe7e2777634603abb75bec35bc1b17.setContent(html_a8bb3dd41fb54f5ab104e88d10936b0b);
+        
+
+        circle_marker_07fbaf28de004a99ba489efce8568aba.bindPopup(popup_d8fe7e2777634603abb75bec35bc1b17)
+        ;
+
+        
+    
+    
+            var circle_marker_2ab6420c2f154be397cc498a4a7a7556 = L.circleMarker(
+                [49.8158683, 6.1296751],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_1aca1b3a8a224be396f3a966db36e08f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ac30d241ae0447f7be5eba138ab20cb4 = $(`<div id="html_ac30d241ae0447f7be5eba138ab20cb4" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Luxembourg</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>30              <p style='color:#FC766AFF'>Speed(mbps):</p>92.1                    </body>                     </html>               </div>`)[0];
+            popup_1aca1b3a8a224be396f3a966db36e08f.setContent(html_ac30d241ae0447f7be5eba138ab20cb4);
+        
+
+        circle_marker_2ab6420c2f154be397cc498a4a7a7556.bindPopup(popup_1aca1b3a8a224be396f3a966db36e08f)
+        ;
+
+        
+    
+    
+            var circle_marker_b71acb9f10f24e698d72cab1c0aff923 = L.circleMarker(
+                [35.8885993, 14.4476911],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_9eab23c7866c48678194e63a4a166618 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c06f45d70f914af997462653426f401a = $(`<div id="html_c06f45d70f914af997462653426f401a" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Malta</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>31              <p style='color:#FC766AFF'>Speed(mbps):</p>90.36                    </body>                     </html>               </div>`)[0];
+            popup_9eab23c7866c48678194e63a4a166618.setContent(html_c06f45d70f914af997462653426f401a);
+        
+
+        circle_marker_b71acb9f10f24e698d72cab1c0aff923.bindPopup(popup_9eab23c7866c48678194e63a4a166618)
+        ;
+
+        
+    
+    
+            var circle_marker_7aa028ece1a044a7b123057b428c6644 = L.circleMarker(
+                [63.2467777, 25.9209164],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_b79c62c9f66b4e899587c3960cc96e37 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9958e83aaa784b589de2eaf726e1b192 = $(`<div id="html_9958e83aaa784b589de2eaf726e1b192" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Finland</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>32              <p style='color:#FC766AFF'>Speed(mbps):</p>89.6                    </body>                     </html>               </div>`)[0];
+            popup_b79c62c9f66b4e899587c3960cc96e37.setContent(html_9958e83aaa784b589de2eaf726e1b192);
+        
+
+        circle_marker_7aa028ece1a044a7b123057b428c6644.bindPopup(popup_b79c62c9f66b4e899587c3960cc96e37)
+        ;
+
+        
+    
+    
+            var circle_marker_abcf98a8d567437b89637d9f241f363d = L.circleMarker(
+                [31.5313113, 34.8667654],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_cbfa3f617c5846c687eb3b7b5291d190 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f2dd09e038cb4bcd8bd439f8bb30d523 = $(`<div id="html_f2dd09e038cb4bcd8bd439f8bb30d523" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Israel</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>33              <p style='color:#FC766AFF'>Speed(mbps):</p>87.98                    </body>                     </html>               </div>`)[0];
+            popup_cbfa3f617c5846c687eb3b7b5291d190.setContent(html_f2dd09e038cb4bcd8bd439f8bb30d523);
+        
+
+        circle_marker_abcf98a8d567437b89637d9f241f363d.bindPopup(popup_cbfa3f617c5846c687eb3b7b5291d190)
+        ;
+
+        
+    
+    
+            var circle_marker_1146021ea3ca45e3af1df727a90a5d0c = L.circleMarker(
+                [-10.3333333, -53.2],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_3bbecf65628444a28131b216a1df6e4f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_203bc7d246c14d5cb745d7dc0c0d80b3 = $(`<div id="html_203bc7d246c14d5cb745d7dc0c0d80b3" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Brazil</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>34              <p style='color:#FC766AFF'>Speed(mbps):</p>87.52                    </body>                     </html>               </div>`)[0];
+            popup_3bbecf65628444a28131b216a1df6e4f.setContent(html_203bc7d246c14d5cb745d7dc0c0d80b3);
+        
+
+        circle_marker_1146021ea3ca45e3af1df727a90a5d0c.bindPopup(popup_3bbecf65628444a28131b216a1df6e4f)
+        ;
+
+        
+    
+    
+            var circle_marker_f4df3baf281948a08b09c4e73e648426 = L.circleMarker(
+                [52.215933, 19.134422],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_7c62f86b1f2a4601ae124494a8479157 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_94c3b76df1da4e6c8e9caae159324218 = $(`<div id="html_94c3b76df1da4e6c8e9caae159324218" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Poland</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>35              <p style='color:#FC766AFF'>Speed(mbps):</p>86.2                    </body>                     </html>               </div>`)[0];
+            popup_7c62f86b1f2a4601ae124494a8479157.setContent(html_94c3b76df1da4e6c8e9caae159324218);
+        
+
+        circle_marker_f4df3baf281948a08b09c4e73e648426.bindPopup(popup_7c62f86b1f2a4601ae124494a8479157)
+        ;
+
+        
+    
+    
+            var circle_marker_82bd7e0e452a4b5ba13165aabbce5586 = L.circleMarker(
+                [-32.8755548, -56.0201525],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_fba5ce298bc942bc991616fedd0bb9bf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8fe341bfed934276b2bf9c5de9d84315 = $(`<div id="html_8fe341bfed934276b2bf9c5de9d84315" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Uruguay</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>36              <p style='color:#FC766AFF'>Speed(mbps):</p>85.61                    </body>                     </html>               </div>`)[0];
+            popup_fba5ce298bc942bc991616fedd0bb9bf.setContent(html_8fe341bfed934276b2bf9c5de9d84315);
+        
+
+        circle_marker_82bd7e0e452a4b5ba13165aabbce5586.bindPopup(popup_fba5ce298bc942bc991616fedd0bb9bf)
+        ;
+
+        
+    
+    
+            var circle_marker_b77a8d9109d747d185a5b60696808205 = L.circleMarker(
+                [4.5693754, 102.2656823],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_e3696f4b68574cafb3ddb073420f45d4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ee1acaefacce498a8e820292acd09c1a = $(`<div id="html_ee1acaefacce498a8e820292acd09c1a" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Malaysia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>37              <p style='color:#FC766AFF'>Speed(mbps):</p>84.18                    </body>                     </html>               </div>`)[0];
+            popup_e3696f4b68574cafb3ddb073420f45d4.setContent(html_ee1acaefacce498a8e820292acd09c1a);
+        
+
+        circle_marker_b77a8d9109d747d185a5b60696808205.bindPopup(popup_e3696f4b68574cafb3ddb073420f45d4)
+        ;
+
+        
+    
+    
+            var circle_marker_2e6228bd0b9a411b94c4c06d99c72a89 = L.circleMarker(
+                [50.6402809, 4.6667145],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_514538d8bf6641769fdbc36df5a8ca25 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c33908d7f90e4e7ba9c8538b0b8f2b04 = $(`<div id="html_c33908d7f90e4e7ba9c8538b0b8f2b04" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Belgium</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>38              <p style='color:#FC766AFF'>Speed(mbps):</p>81.1                    </body>                     </html>               </div>`)[0];
+            popup_514538d8bf6641769fdbc36df5a8ca25.setContent(html_c33908d7f90e4e7ba9c8538b0b8f2b04);
+        
+
+        circle_marker_2e6228bd0b9a411b94c4c06d99c72a89.bindPopup(popup_514538d8bf6641769fdbc36df5a8ca25)
+        ;
+
+        
+    
+    
+            var circle_marker_275f460bc4054a48b4841962db483a1b = L.circleMarker(
+                [55.3500003, 23.7499997],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_7aa0090d8c81497f883437d5ab81b326 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a22470a488af42fda7a9f011bd1f394a = $(`<div id="html_a22470a488af42fda7a9f011bd1f394a" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Lithuania</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>39              <p style='color:#FC766AFF'>Speed(mbps):</p>79.81                    </body>                     </html>               </div>`)[0];
+            popup_7aa0090d8c81497f883437d5ab81b326.setContent(html_a22470a488af42fda7a9f011bd1f394a);
+        
+
+        circle_marker_275f460bc4054a48b4841962db483a1b.bindPopup(popup_7aa0090d8c81497f883437d5ab81b326)
+        ;
+
+        
+    
+    
+            var circle_marker_cfce6d82d36444c7aec5c8f3fce55fd5 = L.circleMarker(
+                [10.8677845, -60.9821067],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_a341901dfe1e4e87855d46b823721f08 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c976f1b7740e48528e5d5af633aa5129 = $(`<div id="html_c976f1b7740e48528e5d5af633aa5129" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Trinidad and Tobago</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>40              <p style='color:#FC766AFF'>Speed(mbps):</p>79.35                    </body>                     </html>               </div>`)[0];
+            popup_a341901dfe1e4e87855d46b823721f08.setContent(html_c976f1b7740e48528e5d5af633aa5129);
+        
+
+        circle_marker_cfce6d82d36444c7aec5c8f3fce55fd5.bindPopup(popup_a341901dfe1e4e87855d46b823721f08)
+        ;
+
+        
+    
+    
+            var circle_marker_f8c7fe8a04284148963e3a8e54dbf581 = L.circleMarker(
+                [25.6242618, 42.3528328],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_1259de9bcb9b437faeae4b6bd3527dcc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_04c5faa09eb94be18428a2de75ee905b = $(`<div id="html_04c5faa09eb94be18428a2de75ee905b" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Saudi Arabia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>41              <p style='color:#FC766AFF'>Speed(mbps):</p>79.32                    </body>                     </html>               </div>`)[0];
+            popup_1259de9bcb9b437faeae4b6bd3527dcc.setContent(html_04c5faa09eb94be18428a2de75ee905b);
+        
+
+        circle_marker_f8c7fe8a04284148963e3a8e54dbf581.bindPopup(popup_1259de9bcb9b437faeae4b6bd3527dcc)
+        ;
+
+        
+    
+    
+            var circle_marker_ce7a79caf8b14f39a29392a095a4ee94 = L.circleMarker(
+                [25.3336984, 51.2295295],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_8c1d6fd502e04e238962119fecc30293 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ebba28ebc9b14e19a391b6e72a4ee860 = $(`<div id="html_ebba28ebc9b14e19a391b6e72a4ee860" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Qatar</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>43              <p style='color:#FC766AFF'>Speed(mbps):</p>72.22                    </body>                     </html>               </div>`)[0];
+            popup_8c1d6fd502e04e238962119fecc30293.setContent(html_ebba28ebc9b14e19a391b6e72a4ee860);
+        
+
+        circle_marker_ce7a79caf8b14f39a29392a095a4ee94.bindPopup(popup_8c1d6fd502e04e238962119fecc30293)
+        ;
+
+        
+    
+    
+            var circle_marker_cf466a617ad54cac8d31ff124cb32ca3 = L.circleMarker(
+                [51.0834196, 10.4234469],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_50e6f3ccebe144a5819e6c9f91834229 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ca95e724141d4b9982b29fb6d5e5236a = $(`<div id="html_ca95e724141d4b9982b29fb6d5e5236a" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Germany</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>44              <p style='color:#FC766AFF'>Speed(mbps):</p>69.52                    </body>                     </html>               </div>`)[0];
+            popup_50e6f3ccebe144a5819e6c9f91834229.setContent(html_ca95e724141d4b9982b29fb6d5e5236a);
+        
+
+        circle_marker_cf466a617ad54cac8d31ff124cb32ca3.bindPopup(popup_50e6f3ccebe144a5819e6c9f91834229)
+        ;
+
+        
+    
+    
+            var circle_marker_a011a5c7ee464d84a417019777320b17 = L.circleMarker(
+                [13.2904027, 108.4265113],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_5f98a0b73ab1454f86526dd90bf7e78f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aac6c88c9abd4ce38d5ffca6a3c6e65b = $(`<div id="html_aac6c88c9abd4ce38d5ffca6a3c6e65b" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Vietnam</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>47              <p style='color:#FC766AFF'>Speed(mbps):</p>67.5                    </body>                     </html>               </div>`)[0];
+            popup_5f98a0b73ab1454f86526dd90bf7e78f.setContent(html_aac6c88c9abd4ce38d5ffca6a3c6e65b);
+        
+
+        circle_marker_a011a5c7ee464d84a417019777320b17.bindPopup(popup_5f98a0b73ab1454f86526dd90bf7e78f)
+        ;
+
+        
+    
+    
+            var circle_marker_735589eaf5eb4f8aaf316269621b79d2 = L.circleMarker(
+                [52.865196, -7.9794599],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_d4dec1f2a0e34761a607effab0c1ee82 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2b73561001bd4e87b991973f8d746c14 = $(`<div id="html_2b73561001bd4e87b991973f8d746c14" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Ireland</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>48              <p style='color:#FC766AFF'>Speed(mbps):</p>66.39                    </body>                     </html>               </div>`)[0];
+            popup_d4dec1f2a0e34761a607effab0c1ee82.setContent(html_2b73561001bd4e87b991973f8d746c14);
+        
+
+        circle_marker_735589eaf5eb4f8aaf316269621b79d2.bindPopup(popup_d4dec1f2a0e34761a607effab0c1ee82)
+        ;
+
+        
+    
+    
+            var circle_marker_cc97cd683d87409c9f26554b47950f78 = L.circleMarker(
+                [56.8406494, 24.7537645],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_176071017a544b74af882f9167c60def = L.popup({"maxWidth": "100%"});
+
+        
+            var html_73c2a5acd4f64e89a5c2bf0c2e82dc52 = $(`<div id="html_73c2a5acd4f64e89a5c2bf0c2e82dc52" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Latvia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>49              <p style='color:#FC766AFF'>Speed(mbps):</p>64.93                    </body>                     </html>               </div>`)[0];
+            popup_176071017a544b74af882f9167c60def.setContent(html_73c2a5acd4f64e89a5c2bf0c2e82dc52);
+        
+
+        circle_marker_cc97cd683d87409c9f26554b47950f78.bindPopup(popup_176071017a544b74af882f9167c60def)
+        ;
+
+        
+    
+    
+            var circle_marker_3b99a78867c247ecb2c16ba36832cc61 = L.circleMarker(
+                [64.6863136, 97.7453061],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_a322d7f0072646248313780f52d14697 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2272e13decc4439995de119a13aa1880 = $(`<div id="html_2272e13decc4439995de119a13aa1880" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Russia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>50              <p style='color:#FC766AFF'>Speed(mbps):</p>63.76                    </body>                     </html>               </div>`)[0];
+            popup_a322d7f0072646248313780f52d14697.setContent(html_2272e13decc4439995de119a13aa1880);
+        
+
+        circle_marker_3b99a78867c247ecb2c16ba36832cc61.bindPopup(popup_a322d7f0072646248313780f52d14697)
+        ;
+
+        
+    
+    
+            var circle_marker_eef7d1c787934b4a9af5ec3fda3e6747 = L.circleMarker(
+                [45.8133113, 14.4808369],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_473e9a60bbb44f13bd243232fbd65e7a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d5282cfea2db42959db63e1433378e60 = $(`<div id="html_d5282cfea2db42959db63e1433378e60" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Slovenia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>51              <p style='color:#FC766AFF'>Speed(mbps):</p>63.63                    </body>                     </html>               </div>`)[0];
+            popup_473e9a60bbb44f13bd243232fbd65e7a.setContent(html_d5282cfea2db42959db63e1433378e60);
+        
+
+        circle_marker_eef7d1c787934b4a9af5ec3fda3e6747.bindPopup(popup_473e9a60bbb44f13bd243232fbd65e7a)
+        ;
+
+        
+    
+    
+            var circle_marker_95522bf02447499ab915890eba86c94c = L.circleMarker(
+                [54.7023545, -3.2765753],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_a241cf4a28034d4884eb3c9bf6b233d9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e8bb15d0a1b7494da9741da81da95b51 = $(`<div id="html_e8bb15d0a1b7494da9741da81da95b51" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>United Kingdom</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>52              <p style='color:#FC766AFF'>Speed(mbps):</p>61.69                    </body>                     </html>               </div>`)[0];
+            popup_a241cf4a28034d4884eb3c9bf6b233d9.setContent(html_e8bb15d0a1b7494da9741da81da95b51);
+        
+
+        circle_marker_95522bf02447499ab915890eba86c94c.bindPopup(popup_a241cf4a28034d4884eb3c9bf6b233d9)
+        ;
+
+        
+    
+    
+            var circle_marker_af87b6f9d6a0496c91c3f971ab3c3542 = L.circleMarker(
+                [4.099917, -72.9088133],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_073a0b404d2043c19eed87772b502014 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7aa5a8ca1c0a4687b50e043808b79283 = $(`<div id="html_7aa5a8ca1c0a4687b50e043808b79283" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Colombia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>53              <p style='color:#FC766AFF'>Speed(mbps):</p>59.97                    </body>                     </html>               </div>`)[0];
+            popup_073a0b404d2043c19eed87772b502014.setContent(html_7aa5a8ca1c0a4687b50e043808b79283);
+        
+
+        circle_marker_af87b6f9d6a0496c91c3f971ab3c3542.bindPopup(popup_073a0b404d2043c19eed87772b502014)
+        ;
+
+        
+    
+    
+            var circle_marker_0c212ca7528c45ee948ae065cce62ed0 = L.circleMarker(
+                [42.6073975, 25.4856617],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_64e8cfa7a0e640389e76254df601c70a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_044b405ec5514be397b5ebe0c7167b2f = $(`<div id="html_044b405ec5514be397b5ebe0c7167b2f" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Bulgaria</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>55              <p style='color:#FC766AFF'>Speed(mbps):</p>55.9                    </body>                     </html>               </div>`)[0];
+            popup_64e8cfa7a0e640389e76254df601c70a.setContent(html_044b405ec5514be397b5ebe0c7167b2f);
+        
+
+        circle_marker_0c212ca7528c45ee948ae065cce62ed0.bindPopup(popup_64e8cfa7a0e640389e76254df601c70a)
+        ;
+
+        
+    
+    
+            var circle_marker_a47c6f1fd6354fd79b0f4a047e71c869 = L.circleMarker(
+                [-23.3165935, -58.1693445],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_9b7a9a4b73d649e9a61f6fa9cc0f5711 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_850a9462494c4b399618a5d750d29495 = $(`<div id="html_850a9462494c4b399618a5d750d29495" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Paraguay</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>56              <p style='color:#FC766AFF'>Speed(mbps):</p>54.58                    </body>                     </html>               </div>`)[0];
+            popup_9b7a9a4b73d649e9a61f6fa9cc0f5711.setContent(html_850a9462494c4b399618a5d750d29495);
+        
+
+        circle_marker_a47c6f1fd6354fd79b0f4a047e71c869.bindPopup(popup_9b7a9a4b73d649e9a61f6fa9cc0f5711)
+        ;
+
+        
+    
+    
+            var circle_marker_7fb9266ae79045d6b5f4c82ef549301f = L.circleMarker(
+                [49.4871968, 31.2718321],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_dbcc7b28a98840a495a52d86a18dc0d9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_43271333fc60468c910936a6765ace4c = $(`<div id="html_43271333fc60468c910936a6765ace4c" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Ukraine</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>57              <p style='color:#FC766AFF'>Speed(mbps):</p>52.5                    </body>                     </html>               </div>`)[0];
+            popup_dbcc7b28a98840a495a52d86a18dc0d9.setContent(html_43271333fc60468c910936a6765ace4c);
+        
+
+        circle_marker_7fb9266ae79045d6b5f4c82ef549301f.bindPopup(popup_dbcc7b28a98840a495a52d86a18dc0d9)
+        ;
+
+        
+    
+    
+            var circle_marker_85e4a18fe8344352bc8bd2745760ee69 = L.circleMarker(
+                [58.7523778, 25.3319078],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_1af71cbf85f548769b323c11ffbee8ac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2291116bbae14400b948a34c8a294492 = $(`<div id="html_2291116bbae14400b948a34c8a294492" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Estonia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>58              <p style='color:#FC766AFF'>Speed(mbps):</p>52.3                    </body>                     </html>               </div>`)[0];
+            popup_1af71cbf85f548769b323c11ffbee8ac.setContent(html_2291116bbae14400b948a34c8a294492);
+        
+
+        circle_marker_85e4a18fe8344352bc8bd2745760ee69.bindPopup(popup_1af71cbf85f548769b323c11ffbee8ac)
+        ;
+
+        
+    
+    
+            var circle_marker_53743a675532404dad18e99c221f4bdf = L.circleMarker(
+                [47.59397, 14.12456],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_7b5c5a3fbe5d4c009ccd298784aab437 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3eec840d4d6448cf8e33616483e05445 = $(`<div id="html_3eec840d4d6448cf8e33616483e05445" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Austria</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>59              <p style='color:#FC766AFF'>Speed(mbps):</p>51.62                    </body>                     </html>               </div>`)[0];
+            popup_7b5c5a3fbe5d4c009ccd298784aab437.setContent(html_3eec840d4d6448cf8e33616483e05445);
+        
+
+        circle_marker_53743a675532404dad18e99c221f4bdf.bindPopup(popup_7b5c5a3fbe5d4c009ccd298784aab437)
+        ;
+
+        
+    
+    
+            var circle_marker_8e9cd8f755924f259ad27ced5a7614df = L.circleMarker(
+                [-24.7761086, 134.755],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_bfac4683c8674962a5ff9d3fca2c2368 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c116c844d77346479aab24905a3f2d99 = $(`<div id="html_c116c844d77346479aab24905a3f2d99" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Australia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>61              <p style='color:#FC766AFF'>Speed(mbps):</p>50.89                    </body>                     </html>               </div>`)[0];
+            popup_bfac4683c8674962a5ff9d3fca2c2368.setContent(html_c116c844d77346479aab24905a3f2d99);
+        
+
+        circle_marker_8e9cd8f755924f259ad27ced5a7614df.bindPopup(popup_bfac4683c8674962a5ff9d3fca2c2368)
+        ;
+
+        
+    
+    
+            var circle_marker_9f24f94020304e94bc65bc938e3fbde4 = L.circleMarker(
+                [42.9868853, 19.5180992],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_678031fb181a4412a7f4cbafc0ec7649 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_471376d6ab7a48c7a87ddf87ecff5661 = $(`<div id="html_471376d6ab7a48c7a87ddf87ecff5661" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Montenegro</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>62              <p style='color:#FC766AFF'>Speed(mbps):</p>50.81                    </body>                     </html>               </div>`)[0];
+            popup_678031fb181a4412a7f4cbafc0ec7649.setContent(html_471376d6ab7a48c7a87ddf87ecff5661);
+        
+
+        circle_marker_9f24f94020304e94bc65bc938e3fbde4.bindPopup(popup_678031fb181a4412a7f4cbafc0ec7649)
+        ;
+
+        
+    
+    
+            var circle_marker_005eab02f7c64c129b9274d83265fba2 = L.circleMarker(
+                [10.2735633, -84.0739102],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_57da316444144fd4aff5e317edeb958e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f8247b1c3140444ab5f3a12d98418169 = $(`<div id="html_f8247b1c3140444ab5f3a12d98418169" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Costa Rica</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>63              <p style='color:#FC766AFF'>Speed(mbps):</p>50.79                    </body>                     </html>               </div>`)[0];
+            popup_57da316444144fd4aff5e317edeb958e.setContent(html_f8247b1c3140444ab5f3a12d98418169);
+        
+
+        circle_marker_005eab02f7c64c129b9274d83265fba2.bindPopup(popup_57da316444144fd4aff5e317edeb958e)
+        ;
+
+        
+    
+    
+            var circle_marker_98b8528e923842fa9d5f1af5a82195bb = L.circleMarker(
+                [31.1667049, 36.941628],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_f264fdb4863a47e6bb3afa33f03deee1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a9381a1691334131a0471806f4d156d4 = $(`<div id="html_a9381a1691334131a0471806f4d156d4" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Jordan</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>65              <p style='color:#FC766AFF'>Speed(mbps):</p>50.18                    </body>                     </html>               </div>`)[0];
+            popup_f264fdb4863a47e6bb3afa33f03deee1.setContent(html_a9381a1691334131a0471806f4d156d4);
+        
+
+        circle_marker_98b8528e923842fa9d5f1af5a82195bb.bindPopup(popup_f264fdb4863a47e6bb3afa33f03deee1)
+        ;
+
+        
+    
+    
+            var circle_marker_9c2f69d007774c26814221ff9a79aa22 = L.circleMarker(
+                [42.6384261, 12.674297],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_f92256d7b04a4d11a81733423f561e10 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_005a2876d647430994b2091733072bf1 = $(`<div id="html_005a2876d647430994b2091733072bf1" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Italy</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>66              <p style='color:#FC766AFF'>Speed(mbps):</p>49.8                    </body>                     </html>               </div>`)[0];
+            popup_f92256d7b04a4d11a81733423f561e10.setContent(html_005a2876d647430994b2091733072bf1);
+        
+
+        circle_marker_9c2f69d007774c26814221ff9a79aa22.bindPopup(popup_f92256d7b04a4d11a81733423f561e10)
+        ;
+
+        
+    
+    
+            var circle_marker_27f90ce2496048748147d4e0adaf7fd4 = L.circleMarker(
+                [12.7503486, 122.7312101],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_163c035f31bc4926bc07ba7473c37a08 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f66be8c77994450bbe6bb937efee08e5 = $(`<div id="html_f66be8c77994450bbe6bb937efee08e5" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Philippines</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>67              <p style='color:#FC766AFF'>Speed(mbps):</p>49.52                    </body>                     </html>               </div>`)[0];
+            popup_163c035f31bc4926bc07ba7473c37a08.setContent(html_f66be8c77994450bbe6bb937efee08e5);
+        
+
+        circle_marker_27f90ce2496048748147d4e0adaf7fd4.bindPopup(popup_163c035f31bc4926bc07ba7473c37a08)
+        ;
+
+        
+    
+    
+            var circle_marker_5c2bf104185b4a37a8b4f5f0207e84e4 = L.circleMarker(
+                [44.1534121, 20.55144],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_a604594c732a4a729feccce8d40efbc1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dcaea885424e4e47895ba0efb31319d9 = $(`<div id="html_dcaea885424e4e47895ba0efb31319d9" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Serbia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>68              <p style='color:#FC766AFF'>Speed(mbps):</p>48.97                    </body>                     </html>               </div>`)[0];
+            popup_a604594c732a4a729feccce8d40efbc1.setContent(html_dcaea885424e4e47895ba0efb31319d9);
+        
+
+        circle_marker_5c2bf104185b4a37a8b4f5f0207e84e4.bindPopup(popup_a604594c732a4a729feccce8d40efbc1)
+        ;
+
+        
+    
+    
+            var circle_marker_af0c74c4d72c4677a4c28ff612d2c905 = L.circleMarker(
+                [49.8167003, 15.4749544],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_a385d65c52b14566a939182d8321aadc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_afb6126ff0084fa8be746013d28f73a9 = $(`<div id="html_afb6126ff0084fa8be746013d28f73a9" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Czechia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>69              <p style='color:#FC766AFF'>Speed(mbps):</p>47.68                    </body>                     </html>               </div>`)[0];
+            popup_a385d65c52b14566a939182d8321aadc.setContent(html_afb6126ff0084fa8be746013d28f73a9);
+        
+
+        circle_marker_af0c74c4d72c4677a4c28ff612d2c905.bindPopup(popup_a385d65c52b14566a939182d8321aadc)
+        ;
+
+        
+    
+    
+            var circle_marker_e41c1ee0a7cc4e0fb0727bd87a89d27d = L.circleMarker(
+                [26.1551249, 50.5344606],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_1932babf22eb4e0189121846d90ac163 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e3fcad90df344e9fa9d477c9eea862fb = $(`<div id="html_e3fcad90df344e9fa9d477c9eea862fb" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Bahrain</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>70              <p style='color:#FC766AFF'>Speed(mbps):</p>47.38                    </body>                     </html>               </div>`)[0];
+            popup_1932babf22eb4e0189121846d90ac163.setContent(html_e3fcad90df344e9fa9d477c9eea862fb);
+        
+
+        circle_marker_e41c1ee0a7cc4e0fb0727bd87a89d27d.bindPopup(popup_1932babf22eb4e0189121846d90ac163)
+        ;
+
+        
+    
+    
+            var circle_marker_8f3e877c175b457283fc1a27eee5eb1f = L.circleMarker(
+                [48.7411522, 19.4528646],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_aee1b8d4b0ee40d591be8041ae01b16c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_25550a690a9743e3abf2944f64af11e3 = $(`<div id="html_25550a690a9743e3abf2944f64af11e3" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Slovakia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>71              <p style='color:#FC766AFF'>Speed(mbps):</p>47.34                    </body>                     </html>               </div>`)[0];
+            popup_aee1b8d4b0ee40d591be8041ae01b16c.setContent(html_25550a690a9743e3abf2944f64af11e3);
+        
+
+        circle_marker_8f3e877c175b457283fc1a27eee5eb1f.bindPopup(popup_aee1b8d4b0ee40d591be8041ae01b16c)
+        ;
+
+        
+    
+    
+            var circle_marker_9d03b4fd3a1f4366bedf0b7956188192 = L.circleMarker(
+                [22.3511148, 78.6677428],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_f0b66686cc854f30b8a3e85d84e66b94 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d74fb62635f3479882acb65b9de0dc1e = $(`<div id="html_d74fb62635f3479882acb65b9de0dc1e" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>India</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>72              <p style='color:#FC766AFF'>Speed(mbps):</p>47.08                    </body>                     </html>               </div>`)[0];
+            popup_f0b66686cc854f30b8a3e85d84e66b94.setContent(html_d74fb62635f3479882acb65b9de0dc1e);
+        
+
+        circle_marker_9d03b4fd3a1f4366bedf0b7956188192.bindPopup(popup_f0b66686cc854f30b8a3e85d84e66b94)
+        ;
+
+        
+    
+    
+            var circle_marker_c99bb1b3bbc940cd924c4cc96d59a96d = L.circleMarker(
+                [46.8250388, 103.8499736],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_6cf8edd0e1054756ab4e788b0f916392 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8ad8ce376a9d4eeeada18a678d6c8d11 = $(`<div id="html_8ad8ce376a9d4eeeada18a678d6c8d11" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Mongolia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>73              <p style='color:#FC766AFF'>Speed(mbps):</p>46.81                    </body>                     </html>               </div>`)[0];
+            popup_6cf8edd0e1054756ab4e788b0f916392.setContent(html_8ad8ce376a9d4eeeada18a678d6c8d11);
+        
+
+        circle_marker_c99bb1b3bbc940cd924c4cc96d59a96d.bindPopup(popup_6cf8edd0e1054756ab4e788b0f916392)
+        ;
+
+        
+    
+    
+            var circle_marker_f4f0f18e73364033811f86c6df8f12f7 = L.circleMarker(
+                [53.4250605, 27.6971358],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_d8a1bb01099d4f4db1f27e6d68762780 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_601a60382c8d45bebe567ac3139ea9fd = $(`<div id="html_601a60382c8d45bebe567ac3139ea9fd" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Belarus</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>74              <p style='color:#FC766AFF'>Speed(mbps):</p>45.67                    </body>                     </html>               </div>`)[0];
+            popup_d8a1bb01099d4f4db1f27e6d68762780.setContent(html_601a60382c8d45bebe567ac3139ea9fd);
+        
+
+        circle_marker_f4f0f18e73364033811f86c6df8f12f7.bindPopup(popup_d8a1bb01099d4f4db1f27e6d68762780)
+        ;
+
+        
+    
+    
+            var circle_marker_575bad1b9efe434080bf63b5117c2e26 = L.circleMarker(
+                [42.5869578, 20.9021231],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_747d3effd61f46e7ab0a5d66b14c68a6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7e4579964b7f42878953817f5d23f2ca = $(`<div id="html_7e4579964b7f42878953817f5d23f2ca" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Kosovo</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>75              <p style='color:#FC766AFF'>Speed(mbps):</p>45.28                    </body>                     </html>               </div>`)[0];
+            popup_747d3effd61f46e7ab0a5d66b14c68a6.setContent(html_7e4579964b7f42878953817f5d23f2ca);
+        
+
+        circle_marker_575bad1b9efe434080bf63b5117c2e26.bindPopup(popup_747d3effd61f46e7ab0a5d66b14c68a6)
+        ;
+
+        
+    
+    
+            var circle_marker_be340fc3ffc04cae9190b4ac10d01e2e = L.circleMarker(
+                [41.5089324, 74.724091],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_711b0bb3a2544e2682dcf18d9be0d8b8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bd9479b1356d4ff9b562ef21f29ca84a = $(`<div id="html_bd9479b1356d4ff9b562ef21f29ca84a" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Kyrgyzstan</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>76              <p style='color:#FC766AFF'>Speed(mbps):</p>43.31                    </body>                     </html>               </div>`)[0];
+            popup_711b0bb3a2544e2682dcf18d9be0d8b8.setContent(html_bd9479b1356d4ff9b562ef21f29ca84a);
+        
+
+        circle_marker_be340fc3ffc04cae9190b4ac10d01e2e.bindPopup(popup_711b0bb3a2544e2682dcf18d9be0d8b8)
+        ;
+
+        
+    
+    
+            var circle_marker_922653df6f5740b5a72387bd6c6c0920 = L.circleMarker(
+                [-6.8699697, -75.0458515],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_931ae3a324334712b5d3f9817b22703b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_594ad1a12e084352931f56affe5a52be = $(`<div id="html_594ad1a12e084352931f56affe5a52be" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Peru</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>77              <p style='color:#FC766AFF'>Speed(mbps):</p>43.21                    </body>                     </html>               </div>`)[0];
+            popup_931ae3a324334712b5d3f9817b22703b.setContent(html_594ad1a12e084352931f56affe5a52be);
+        
+
+        circle_marker_922653df6f5740b5a72387bd6c6c0920.bindPopup(popup_931ae3a324334712b5d3f9817b22703b)
+        ;
+
+        
+    
+    
+            var circle_marker_92f83218f4fa4cd681e8d013da2948f2 = L.circleMarker(
+                [21.0000287, 57.0036901],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_4e353e2802194e0fbe26f2b518c4ed90 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4481ee366b6e451683147d823b0e527d = $(`<div id="html_4481ee366b6e451683147d823b0e527d" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Oman</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>78              <p style='color:#FC766AFF'>Speed(mbps):</p>42.65                    </body>                     </html>               </div>`)[0];
+            popup_4e353e2802194e0fbe26f2b518c4ed90.setContent(html_4481ee366b6e451683147d823b0e527d);
+        
+
+        circle_marker_92f83218f4fa4cd681e8d013da2948f2.bindPopup(popup_4e353e2802194e0fbe26f2b518c4ed90)
+        ;
+
+        
+    
+    
+            var circle_marker_1a8d3f1608914a0a86c87cb65e898542 = L.circleMarker(
+                [28.1083929, 84.0917139],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_42cea5c649a14d11aef29fc896999b42 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bd22285b7a7346bda6a44d671a1d753b = $(`<div id="html_bd22285b7a7346bda6a44d671a1d753b" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Nepal</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>79              <p style='color:#FC766AFF'>Speed(mbps):</p>39.73                    </body>                     </html>               </div>`)[0];
+            popup_42cea5c649a14d11aef29fc896999b42.setContent(html_bd22285b7a7346bda6a44d671a1d753b);
+        
+
+        circle_marker_1a8d3f1608914a0a86c87cb65e898542.bindPopup(popup_42cea5c649a14d11aef29fc896999b42)
+        ;
+
+        
+    
+    
+            var circle_marker_8700bcc4c3d24a2880eeac4fa3e790c2 = L.circleMarker(
+                [45.5643442, 17.0118954],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_1ff865e24ced45d2a5f31462b9f39c0c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e7c51fe376274ea39b3e4b755954026f = $(`<div id="html_e7c51fe376274ea39b3e4b755954026f" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Croatia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>80              <p style='color:#FC766AFF'>Speed(mbps):</p>39.54                    </body>                     </html>               </div>`)[0];
+            popup_1ff865e24ced45d2a5f31462b9f39c0c.setContent(html_e7c51fe376274ea39b3e4b755954026f);
+        
+
+        circle_marker_8700bcc4c3d24a2880eeac4fa3e790c2.bindPopup(popup_1ff865e24ced45d2a5f31462b9f39c0c)
+        ;
+
+        
+    
+    
+            var circle_marker_8c380e881ed148c7971088134112caf4 = L.circleMarker(
+                [23.6585116, -102.0077097],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_7ee34e24c8d3495c8efbfe65dfd82bb1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_150db6cbb0d7498b962c8859972e761a = $(`<div id="html_150db6cbb0d7498b962c8859972e761a" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Mexico</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>81              <p style='color:#FC766AFF'>Speed(mbps):</p>38.77                    </body>                     </html>               </div>`)[0];
+            popup_7ee34e24c8d3495c8efbfe65dfd82bb1.setContent(html_150db6cbb0d7498b962c8859972e761a);
+        
+
+        circle_marker_8c380e881ed148c7971088134112caf4.bindPopup(popup_7ee34e24c8d3495c8efbfe65dfd82bb1)
+        ;
+
+        
+    
+    
+            var circle_marker_99882207f956432f82b87c234a8ad70b = L.circleMarker(
+                [-34.9964963, -64.9672817],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_5adde112862d4ac6b963b1019fa87032 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_029e7b2e841a4846a03731d6d7fe2797 = $(`<div id="html_029e7b2e841a4846a03731d6d7fe2797" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Argentina</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>82              <p style='color:#FC766AFF'>Speed(mbps):</p>38.47                    </body>                     </html>               </div>`)[0];
+            popup_5adde112862d4ac6b963b1019fa87032.setContent(html_029e7b2e841a4846a03731d6d7fe2797);
+        
+
+        circle_marker_99882207f956432f82b87c234a8ad70b.bindPopup(popup_5adde112862d4ac6b963b1019fa87032)
+        ;
+
+        
+    
+    
+            var circle_marker_7106a54e50634435bb4b4153aa8a4317 = L.circleMarker(
+                [41.32373, 63.9528098],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_385b926343614026b40041764f94eca7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_37665b65b4534bd3b1c773514f02e37d = $(`<div id="html_37665b65b4534bd3b1c773514f02e37d" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Uzbekistan</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>84              <p style='color:#FC766AFF'>Speed(mbps):</p>36.85                    </body>                     </html>               </div>`)[0];
+            popup_385b926343614026b40041764f94eca7.setContent(html_37665b65b4534bd3b1c773514f02e37d);
+        
+
+        circle_marker_7106a54e50634435bb4b4153aa8a4317.bindPopup(popup_385b926343614026b40041764f94eca7)
+        ;
+
+        
+    
+    
+            var circle_marker_70282bfb7fb9484ab204e6448247ca86 = L.circleMarker(
+                [18.1850507, -77.3947693],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_89aa26598a20422faff8d4b47698f6ae = L.popup({"maxWidth": "100%"});
+
+        
+            var html_782175f58ea5497e9fdefc5ea0c60239 = $(`<div id="html_782175f58ea5497e9fdefc5ea0c60239" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Jamaica</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>85              <p style='color:#FC766AFF'>Speed(mbps):</p>36.45                    </body>                     </html>               </div>`)[0];
+            popup_89aa26598a20422faff8d4b47698f6ae.setContent(html_782175f58ea5497e9fdefc5ea0c60239);
+        
+
+        circle_marker_70282bfb7fb9484ab204e6448247ca86.bindPopup(popup_89aa26598a20422faff8d4b47698f6ae)
+        ;
+
+        
+    
+    
+            var circle_marker_d186ebb8716a4dd8afde468ab3351a80 = L.circleMarker(
+                [26.2540493, 29.2675469],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_8e9fd6dc9ec344648bd8110a3f143e41 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_30fa577849204d408d570c3ceec26a8a = $(`<div id="html_30fa577849204d408d570c3ceec26a8a" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Egypt</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>86              <p style='color:#FC766AFF'>Speed(mbps):</p>35.67                    </body>                     </html>               </div>`)[0];
+            popup_8e9fd6dc9ec344648bd8110a3f143e41.setContent(html_30fa577849204d408d570c3ceec26a8a);
+        
+
+        circle_marker_d186ebb8716a4dd8afde468ab3351a80.bindPopup(popup_8e9fd6dc9ec344648bd8110a3f143e41)
+        ;
+
+        
+    
+    
+            var circle_marker_6151f29c3d6c49239274733e41ae9eab = L.circleMarker(
+                [4.4137155, 114.5653908],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_1ebc411aa8f845169f7a55603a4e5c98 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d586f7914ec548fe8c9c7fbcaaf714a6 = $(`<div id="html_d586f7914ec548fe8c9c7fbcaaf714a6" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Brunei</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>87              <p style='color:#FC766AFF'>Speed(mbps):</p>35.26                    </body>                     </html>               </div>`)[0];
+            popup_1ebc411aa8f845169f7a55603a4e5c98.setContent(html_d586f7914ec548fe8c9c7fbcaaf714a6);
+        
+
+        circle_marker_6151f29c3d6c49239274733e41ae9eab.bindPopup(popup_1ebc411aa8f845169f7a55603a4e5c98)
+        ;
+
+        
+    
+    
+            var circle_marker_de981a1aee2a4b36b2a2544bd2c6a81c = L.circleMarker(
+                [40.7696272, 44.6736646],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_942745564afd48649d88089b98043373 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_67c0ee78e33740fdae867936b55fa6ba = $(`<div id="html_67c0ee78e33740fdae867936b55fa6ba" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Armenia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>88              <p style='color:#FC766AFF'>Speed(mbps):</p>34.26                    </body>                     </html>               </div>`)[0];
+            popup_942745564afd48649d88089b98043373.setContent(html_67c0ee78e33740fdae867936b55fa6ba);
+        
+
+        circle_marker_de981a1aee2a4b36b2a2544bd2c6a81c.bindPopup(popup_942745564afd48649d88089b98043373)
+        ;
+
+        
+    
+    
+            var circle_marker_56ddc1e6d3f145fb920defad0c2134e3 = L.circleMarker(
+                [-1.3397668, -79.3666965],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_442f306f46414cfa846f99692ddf3263 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2f88f8777e5348c0806bb4fda9c7efe0 = $(`<div id="html_2f88f8777e5348c0806bb4fda9c7efe0" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Ecuador</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>89              <p style='color:#FC766AFF'>Speed(mbps):</p>33.96                    </body>                     </html>               </div>`)[0];
+            popup_442f306f46414cfa846f99692ddf3263.setContent(html_2f88f8777e5348c0806bb4fda9c7efe0);
+        
+
+        circle_marker_56ddc1e6d3f145fb920defad0c2134e3.bindPopup(popup_442f306f46414cfa846f99692ddf3263)
+        ;
+
+        
+    
+    
+            var circle_marker_3cc1152169b34ce0b47bff0fa2237e19 = L.circleMarker(
+                [47.2286086, 65.2093197],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_676b51c7d12d4d8597ceef186a783c66 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c1b32e003d9845ce9345cdf2ad971d8d = $(`<div id="html_c1b32e003d9845ce9345cdf2ad971d8d" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Kazakhstan</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>90              <p style='color:#FC766AFF'>Speed(mbps):</p>33.76                    </body>                     </html>               </div>`)[0];
+            popup_676b51c7d12d4d8597ceef186a783c66.setContent(html_c1b32e003d9845ce9345cdf2ad971d8d);
+        
+
+        circle_marker_3cc1152169b34ce0b47bff0fa2237e19.bindPopup(popup_676b51c7d12d4d8597ceef186a783c66)
+        ;
+
+        
+    
+    
+            var circle_marker_f503f07994d2423faa1cd54da7edf07d = L.circleMarker(
+                [41.000028, 19.9999619],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_9170d2da8099433380488c2b23dffb75 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_49fbfa6b6da74c23b3cc63b01b64476d = $(`<div id="html_49fbfa6b6da74c23b3cc63b01b64476d" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Albania</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>91              <p style='color:#FC766AFF'>Speed(mbps):</p>33.5                    </body>                     </html>               </div>`)[0];
+            popup_9170d2da8099433380488c2b23dffb75.setContent(html_49fbfa6b6da74c23b3cc63b01b64476d);
+        
+
+        circle_marker_f503f07994d2423faa1cd54da7edf07d.bindPopup(popup_9170d2da8099433380488c2b23dffb75)
+        ;
+
+        
+    
+    
+            var circle_marker_b0d3e0a77b5646d6a849bccd7fa47885 = L.circleMarker(
+                [38.9953683, 21.9877132],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_c26b6d12c763457384241a8e02ac0a52 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6353700e997a40588408c0e49afddf6d = $(`<div id="html_6353700e997a40588408c0e49afddf6d" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Greece</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>92              <p style='color:#FC766AFF'>Speed(mbps):</p>33.41                    </body>                     </html>               </div>`)[0];
+            popup_c26b6d12c763457384241a8e02ac0a52.setContent(html_6353700e997a40588408c0e49afddf6d);
+        
+
+        circle_marker_b0d3e0a77b5646d6a849bccd7fa47885.bindPopup(popup_c26b6d12c763457384241a8e02ac0a52)
+        ;
+
+        
+    
+    
+            var circle_marker_d17ecd7ca2d84104a380c0a03f408f3e = L.circleMarker(
+                [24.4769288, 90.2934413],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_66402f2fb2fe4022ab49f2f1c0a1a6ac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_978cac6e08ce4c6e9181a6b6cea72157 = $(`<div id="html_978cac6e08ce4c6e9181a6b6cea72157" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Bangladesh</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>94              <p style='color:#FC766AFF'>Speed(mbps):</p>31.52                    </body>                     </html>               </div>`)[0];
+            popup_66402f2fb2fe4022ab49f2f1c0a1a6ac.setContent(html_978cac6e08ce4c6e9181a6b6cea72157);
+        
+
+        circle_marker_d17ecd7ca2d84104a380c0a03f408f3e.bindPopup(popup_66402f2fb2fe4022ab49f2f1c0a1a6ac)
+        ;
+
+        
+    
+    
+            var circle_marker_6afce82b802f4417a996fb376062c13c = L.circleMarker(
+                [7.9897371, -5.5679458],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_3edde199e29f4d4b8992b56f557b300f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_be57c2425a8a4ca3bee56a671469612d = $(`<div id="html_be57c2425a8a4ca3bee56a671469612d" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Côte d'Ivoire</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>95              <p style='color:#FC766AFF'>Speed(mbps):</p>31.42                    </body>                     </html>               </div>`)[0];
+            popup_3edde199e29f4d4b8992b56f557b300f.setContent(html_be57c2425a8a4ca3bee56a671469612d);
+        
+
+        circle_marker_6afce82b802f4417a996fb376062c13c.bindPopup(popup_3edde199e29f4d4b8992b56f557b300f)
+        ;
+
+        
+    
+    
+            var circle_marker_72f9c116e46046a3af2240c8e21809ca = L.circleMarker(
+                [-28.8166236, 24.991639],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_0dbfe075cb594c9baaa68dd6706a160c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0c2d9caed14346d6b2a6bedef5ba6e36 = $(`<div id="html_0c2d9caed14346d6b2a6bedef5ba6e36" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>South Africa</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>97              <p style='color:#FC766AFF'>Speed(mbps):</p>29.6                    </body>                     </html>               </div>`)[0];
+            popup_0dbfe075cb594c9baaa68dd6706a160c.setContent(html_0c2d9caed14346d6b2a6bedef5ba6e36);
+        
+
+        circle_marker_72f9c116e46046a3af2240c8e21809ca.bindPopup(popup_0dbfe075cb594c9baaa68dd6706a160c)
+        ;
+
+        
+    
+    
+            var circle_marker_ff75a44ba53d4c9d97371d0636ae18ba = L.circleMarker(
+                [34.9823018, 33.1451285],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_8b72c5ee72fb4da68ddc8005101480d2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e3c8a67db6d1463a833a124d07e2900d = $(`<div id="html_e3c8a67db6d1463a833a124d07e2900d" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Cyprus</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>98              <p style='color:#FC766AFF'>Speed(mbps):</p>29.48                    </body>                     </html>               </div>`)[0];
+            popup_8b72c5ee72fb4da68ddc8005101480d2.setContent(html_e3c8a67db6d1463a833a124d07e2900d);
+        
+
+        circle_marker_ff75a44ba53d4c9d97371d0636ae18ba.bindPopup(popup_8b72c5ee72fb4da68ddc8005101480d2)
+        ;
+
+        
+    
+    
+            var circle_marker_06d85984b3ad42578cc110adcabd8abc = L.circleMarker(
+                [12.6090157, -85.2936911],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_7d180f2c30c343b49b5af4b13a8ed7db = L.popup({"maxWidth": "100%"});
+
+        
+            var html_06383cfe8f0b423b9c313711af45db06 = $(`<div id="html_06383cfe8f0b423b9c313711af45db06" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Nicaragua</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>99              <p style='color:#FC766AFF'>Speed(mbps):</p>29.04                    </body>                     </html>               </div>`)[0];
+            popup_7d180f2c30c343b49b5af4b13a8ed7db.setContent(html_06383cfe8f0b423b9c313711af45db06);
+        
+
+        circle_marker_06d85984b3ad42578cc110adcabd8abc.bindPopup(popup_7d180f2c30c343b49b5af4b13a8ed7db)
+        ;
+
+        
+    
+    
+            var circle_marker_b5b9b6c1d4614d1eba1caf3f6572d136 = L.circleMarker(
+                [20.0171109, 103.378253],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_1a6ffc3309cf4c9687393e6ff6320c6b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5302ca50390a44359121361db89b36b2 = $(`<div id="html_5302ca50390a44359121361db89b36b2" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Laos</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>100              <p style='color:#FC766AFF'>Speed(mbps):</p>28.11                    </body>                     </html>               </div>`)[0];
+            popup_1a6ffc3309cf4c9687393e6ff6320c6b.setContent(html_5302ca50390a44359121361db89b36b2);
+        
+
+        circle_marker_b5b9b6c1d4614d1eba1caf3f6572d136.bindPopup(popup_1a6ffc3309cf4c9687393e6ff6320c6b)
+        ;
+
+        
+    
+    
+            var circle_marker_def877ff7834469696ca246cbe956dec = L.circleMarker(
+                [8.0300284, -1.0800271],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_3e596b6792ee4e1baccdeec9c8c243dd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_42f9a4096c7342d5b44aab766940cb40 = $(`<div id="html_42f9a4096c7342d5b44aab766940cb40" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Ghana</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>101              <p style='color:#FC766AFF'>Speed(mbps):</p>27.16                    </body>                     </html>               </div>`)[0];
+            popup_3e596b6792ee4e1baccdeec9c8c243dd.setContent(html_42f9a4096c7342d5b44aab766940cb40);
+        
+
+        circle_marker_def877ff7834469696ca246cbe956dec.bindPopup(popup_3e596b6792ee4e1baccdeec9c8c243dd)
+        ;
+
+        
+    
+    
+            var circle_marker_f01f117ddbae45679efaf850273a99c3 = L.circleMarker(
+                [41.6171214, 21.7168387],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_54e97b7e2b2e4d0594ae817574f4b41c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_84b00072443d435a89be06d41dfa8aaa = $(`<div id="html_84b00072443d435a89be06d41dfa8aaa" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>North Macedonia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>102              <p style='color:#FC766AFF'>Speed(mbps):</p>26.77                    </body>                     </html>               </div>`)[0];
+            popup_54e97b7e2b2e4d0594ae817574f4b41c.setContent(html_84b00072443d435a89be06d41dfa8aaa);
+        
+
+        circle_marker_f01f117ddbae45679efaf850273a99c3.bindPopup(popup_54e97b7e2b2e4d0594ae817574f4b41c)
+        ;
+
+        
+    
+    
+            var circle_marker_1b2b71d875cd4e02b6a4643cbf998b84 = L.circleMarker(
+                [38.9597594, 34.9249653],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_d392af55fd124a3ea05cfb6299126fed = L.popup({"maxWidth": "100%"});
+
+        
+            var html_20a9e2ef42af4e66967b9dc687e33e2c = $(`<div id="html_20a9e2ef42af4e66967b9dc687e33e2c" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Turkey</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>103              <p style='color:#FC766AFF'>Speed(mbps):</p>26.34                    </body>                     </html>               </div>`)[0];
+            popup_d392af55fd124a3ea05cfb6299126fed.setContent(html_20a9e2ef42af4e66967b9dc687e33e2c);
+        
+
+        circle_marker_1b2b71d875cd4e02b6a4643cbf998b84.bindPopup(popup_d392af55fd124a3ea05cfb6299126fed)
+        ;
+
+        
+    
+    
+            var circle_marker_fe143788133949d79db539974811a3d9 = L.circleMarker(
+                [15.2572432, -86.0755145],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_0f3a52fbffcb45e29e30e9d8526e7e13 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_852a3592299345c3ac449ae2cf7dd391 = $(`<div id="html_852a3592299345c3ac449ae2cf7dd391" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Honduras</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>104              <p style='color:#FC766AFF'>Speed(mbps):</p>25.98                    </body>                     </html>               </div>`)[0];
+            popup_0f3a52fbffcb45e29e30e9d8526e7e13.setContent(html_852a3592299345c3ac449ae2cf7dd391);
+        
+
+        circle_marker_fe143788133949d79db539974811a3d9.bindPopup(popup_0f3a52fbffcb45e29e30e9d8526e7e13)
+        ;
+
+        
+    
+    
+            var circle_marker_0b46c7e9a8784b7eb814eac516244e3a = L.circleMarker(
+                [-17.0568696, -64.9912286],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_9dc0cae348474e3eac67692833edf333 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_71e9014d131f494f9d01b225e4dafdf9 = $(`<div id="html_71e9014d131f494f9d01b225e4dafdf9" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Bolivia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>107              <p style='color:#FC766AFF'>Speed(mbps):</p>24.19                    </body>                     </html>               </div>`)[0];
+            popup_9dc0cae348474e3eac67692833edf333.setContent(html_71e9014d131f494f9d01b225e4dafdf9);
+        
+
+        circle_marker_0b46c7e9a8784b7eb814eac516244e3a.bindPopup(popup_9dc0cae348474e3eac67692833edf333)
+        ;
+
+        
+    
+    
+            var circle_marker_60ef0541a2ea4492a1320aeae7da629f = L.circleMarker(
+                [44.3053476, 17.5961467],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_95ed866d7de04275bedeb8764db1c752 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1b93d3f6b92b41109d263866e58df117 = $(`<div id="html_1b93d3f6b92b41109d263866e58df117" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Bosnia and Herzegovina</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>108              <p style='color:#FC766AFF'>Speed(mbps):</p>22.56                    </body>                     </html>               </div>`)[0];
+            popup_95ed866d7de04275bedeb8764db1c752.setContent(html_1b93d3f6b92b41109d263866e58df117);
+        
+
+        circle_marker_60ef0541a2ea4492a1320aeae7da629f.bindPopup(popup_95ed866d7de04275bedeb8764db1c752)
+        ;
+
+        
+    
+    
+            var circle_marker_d96c12a667f0476ebbfaff6fca76a71d = L.circleMarker(
+                [15.687100699999998, -90.12265453178017],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_bb6f56d19b864e2985811c21d7ea6c68 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e20a903f74d140ada2e28f3e32f754b6 = $(`<div id="html_e20a903f74d140ada2e28f3e32f754b6" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Guatemala</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>110              <p style='color:#FC766AFF'>Speed(mbps):</p>21.56                    </body>                     </html>               </div>`)[0];
+            popup_bb6f56d19b864e2985811c21d7ea6c68.setContent(html_e20a903f74d140ada2e28f3e32f754b6);
+        
+
+        circle_marker_d96c12a667f0476ebbfaff6fca76a71d.bindPopup(popup_bb6f56d19b864e2985811c21d7ea6c68)
+        ;
+
+        
+    
+    
+            var circle_marker_13ff406f180644c3b8792c3aa3968266 = L.circleMarker(
+                [13.8000382, -88.9140683],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_5114f4faf40d4cccb9578662e11979d5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_869454cd6cff42a89ca6337688afea9b = $(`<div id="html_869454cd6cff42a89ca6337688afea9b" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>El Salvador</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>111              <p style='color:#FC766AFF'>Speed(mbps):</p>21.11                    </body>                     </html>               </div>`)[0];
+            popup_5114f4faf40d4cccb9578662e11979d5.setContent(html_869454cd6cff42a89ca6337688afea9b);
+        
+
+        circle_marker_13ff406f180644c3b8792c3aa3968266.bindPopup(popup_5114f4faf40d4cccb9578662e11979d5)
+        ;
+
+        
+    
+    
+            var circle_marker_40050d28f0d34458a685b73b6afa83c4 = L.circleMarker(
+                [7.5554942, 80.7137847],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_04d05d93d6b9465d81b0db990abc2b0f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7793128de5af46618469a4e8727b5918 = $(`<div id="html_7793128de5af46618469a4e8727b5918" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Sri Lanka</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>112              <p style='color:#FC766AFF'>Speed(mbps):</p>20.94                    </body>                     </html>               </div>`)[0];
+            popup_04d05d93d6b9465d81b0db990abc2b0f.setContent(html_7793128de5af46618469a4e8727b5918);
+        
+
+        circle_marker_40050d28f0d34458a685b73b6afa83c4.bindPopup(popup_04d05d93d6b9465d81b0db990abc2b0f)
+        ;
+
+        
+    
+    
+            var circle_marker_e0eb2949812742bb9d493e5e4c7d47ef = L.circleMarker(
+                [33.0955793, 44.1749775],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_62f7b3ebba70415585ee5aae9aa1b23b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3e5c51581c12434997332b604dc7a01d = $(`<div id="html_3e5c51581c12434997332b604dc7a01d" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Iraq</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>113              <p style='color:#FC766AFF'>Speed(mbps):</p>20.64                    </body>                     </html>               </div>`)[0];
+            popup_62f7b3ebba70415585ee5aae9aa1b23b.setContent(html_3e5c51581c12434997332b604dc7a01d);
+        
+
+        circle_marker_e0eb2949812742bb9d493e5e4c7d47ef.bindPopup(popup_62f7b3ebba70415585ee5aae9aa1b23b)
+        ;
+
+        
+    
+    
+            var circle_marker_77872410d78e43e0ad2ee22952231813 = L.circleMarker(
+                [14.4750607, -14.4529612],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_8dcc335b26604cb2b67da636965cfab7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_44694473b7bb44cca64d9ba1604d848a = $(`<div id="html_44694473b7bb44cca64d9ba1604d848a" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Senegal</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>114              <p style='color:#FC766AFF'>Speed(mbps):</p>20.36                    </body>                     </html>               </div>`)[0];
+            popup_8dcc335b26604cb2b67da636965cfab7.setContent(html_44694473b7bb44cca64d9ba1604d848a);
+        
+
+        circle_marker_77872410d78e43e0ad2ee22952231813.bindPopup(popup_8dcc335b26604cb2b67da636965cfab7)
+        ;
+
+        
+    
+    
+            var circle_marker_aad96211201c4971b1c723e87df2598c = L.circleMarker(
+                [-2.4833826, 117.8902853],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_55be72639c1c49b38e325b783efe3a47 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_57ebbb2dd94947b4a08a97dda9bd7a28 = $(`<div id="html_57ebbb2dd94947b4a08a97dda9bd7a28" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Indonesia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>115              <p style='color:#FC766AFF'>Speed(mbps):</p>20.2                    </body>                     </html>               </div>`)[0];
+            popup_55be72639c1c49b38e325b783efe3a47.setContent(html_57ebbb2dd94947b4a08a97dda9bd7a28);
+        
+
+        circle_marker_aad96211201c4971b1c723e87df2598c.bindPopup(popup_55be72639c1c49b38e325b783efe3a47)
+        ;
+
+        
+    
+    
+            var circle_marker_8ff6b63d9bbe45d38146c24d09e8d50e = L.circleMarker(
+                [32.3293809, -83.1137366],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_37153aba49ad47a491a3fcbb68cde640 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9bfea8f2914f479aaa7dc9cd4c069c28 = $(`<div id="html_9bfea8f2914f479aaa7dc9cd4c069c28" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Georgia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>116              <p style='color:#FC766AFF'>Speed(mbps):</p>20.18                    </body>                     </html>               </div>`)[0];
+            popup_37153aba49ad47a491a3fcbb68cde640.setContent(html_9bfea8f2914f479aaa7dc9cd4c069c28);
+        
+
+        circle_marker_8ff6b63d9bbe45d38146c24d09e8d50e.bindPopup(popup_37153aba49ad47a491a3fcbb68cde640)
+        ;
+
+        
+    
+    
+            var circle_marker_a7fba271560b4626883356ada428c5b2 = L.circleMarker(
+                [-20.2759451, 57.5703566],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_15e759081f144623be29c40303ef3794 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5611a117a21a4a98a642b7c31252a607 = $(`<div id="html_5611a117a21a4a98a642b7c31252a607" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Mauritius</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>117              <p style='color:#FC766AFF'>Speed(mbps):</p>19.88                    </body>                     </html>               </div>`)[0];
+            popup_15e759081f144623be29c40303ef3794.setContent(html_5611a117a21a4a98a642b7c31252a607);
+        
+
+        circle_marker_a7fba271560b4626883356ada428c5b2.bindPopup(popup_15e759081f144623be29c40303ef3794)
+        ;
+
+        
+    
+    
+            var circle_marker_33cbc22a730144a08fd2bbeaef066727 = L.circleMarker(
+                [12.0753083, -1.6880314],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_557b97e03c2146a6b3d425e864e74f4c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d808663c8baa42b6b3cc602df89a3c0c = $(`<div id="html_d808663c8baa42b6b3cc602df89a3c0c" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Burkina Faso</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>118              <p style='color:#FC766AFF'>Speed(mbps):</p>19.71                    </body>                     </html>               </div>`)[0];
+            popup_557b97e03c2146a6b3d425e864e74f4c.setContent(html_d808663c8baa42b6b3cc602df89a3c0c);
+        
+
+        circle_marker_33cbc22a730144a08fd2bbeaef066727.bindPopup(popup_557b97e03c2146a6b3d425e864e74f4c)
+        ;
+
+        
+    
+    
+            var circle_marker_c45a7d3803ab482cabfec71cab7ad0e2 = L.circleMarker(
+                [13.5066394, 104.869423],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_96297e8f03324fb0852a747792c46944 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fb3685c0ca2d412893bd86b588aa9fdf = $(`<div id="html_fb3685c0ca2d412893bd86b588aa9fdf" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Cambodia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>119              <p style='color:#FC766AFF'>Speed(mbps):</p>19.36                    </body>                     </html>               </div>`)[0];
+            popup_96297e8f03324fb0852a747792c46944.setContent(html_fb3685c0ca2d412893bd86b588aa9fdf);
+        
+
+        circle_marker_c45a7d3803ab482cabfec71cab7ad0e2.bindPopup(popup_96297e8f03324fb0852a747792c46944)
+        ;
+
+        
+    
+    
+            var circle_marker_4681a641e8304acdbc6a916d42d902db = L.circleMarker(
+                [40.3936294, 47.7872508],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_a0eb72d6f7414b0fa1dcff73425cf9be = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ce16120f795a4912bb10c47212c06dc1 = $(`<div id="html_ce16120f795a4912bb10c47212c06dc1" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Azerbaijan</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>122              <p style='color:#FC766AFF'>Speed(mbps):</p>17.4                    </body>                     </html>               </div>`)[0];
+            popup_a0eb72d6f7414b0fa1dcff73425cf9be.setContent(html_ce16120f795a4912bb10c47212c06dc1);
+        
+
+        circle_marker_4681a641e8304acdbc6a916d42d902db.bindPopup(popup_a0eb72d6f7414b0fa1dcff73425cf9be)
+        ;
+
+        
+    
+    
+            var circle_marker_154f583090094e00aacb9e380ba105d2 = L.circleMarker(
+                [38.6281733, 70.8156541],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_14fa626cfd674753abeb5df56438a61c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0c76a7437a934f149c953ab89e1095e5 = $(`<div id="html_0c76a7437a934f149c953ab89e1095e5" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Tajikistan</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>124              <p style='color:#FC766AFF'>Speed(mbps):</p>16.96                    </body>                     </html>               </div>`)[0];
+            popup_14fa626cfd674753abeb5df56438a61c.setContent(html_0c76a7437a934f149c953ab89e1095e5);
+        
+
+        circle_marker_154f583090094e00aacb9e380ba105d2.bindPopup(popup_14fa626cfd674753abeb5df56438a61c)
+        ;
+
+        
+    
+    
+            var circle_marker_733d2dda91b2439c8b1adb22fda8fbaa = L.circleMarker(
+                [19.0974031, -70.3028026],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_c24e83c10219425fa27693d4504ac407 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a4ad7e1f70904103a35964c1e22688c6 = $(`<div id="html_a4ad7e1f70904103a35964c1e22688c6" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Dominican Republic</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>127              <p style='color:#FC766AFF'>Speed(mbps):</p>15.52                    </body>                     </html>               </div>`)[0];
+            popup_c24e83c10219425fa27693d4504ac407.setContent(html_a4ad7e1f70904103a35964c1e22688c6);
+        
+
+        circle_marker_733d2dda91b2439c8b1adb22fda8fbaa.bindPopup(popup_c24e83c10219425fa27693d4504ac407)
+        ;
+
+        
+    
+    
+            var circle_marker_329da82a0f72431f83efd5d3dd0339c7 = L.circleMarker(
+                [17.1750495, 95.9999652],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_da29f9c6f05c43db9e1583759322f760 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a94c27e3382a4f0b809b6712daf80b61 = $(`<div id="html_a94c27e3382a4f0b809b6712daf80b61" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Republic of the Union of Myanmar</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>128              <p style='color:#FC766AFF'>Speed(mbps):</p>15.2                    </body>                     </html>               </div>`)[0];
+            popup_da29f9c6f05c43db9e1583759322f760.setContent(html_a94c27e3382a4f0b809b6712daf80b61);
+        
+
+        circle_marker_329da82a0f72431f83efd5d3dd0339c7.bindPopup(popup_da29f9c6f05c43db9e1583759322f760)
+        ;
+
+        
+    
+    
+            var circle_marker_58c7dd499b3640c19b3651b45cac1f24 = L.circleMarker(
+                [19.1399952, -72.3570972],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_2eee50354a3449a0bfe72ab91c1d1044 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6b305055635049b2b4fb839aae039d9c = $(`<div id="html_6b305055635049b2b4fb839aae039d9c" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Haiti</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>129              <p style='color:#FC766AFF'>Speed(mbps):</p>14.89                    </body>                     </html>               </div>`)[0];
+            popup_2eee50354a3449a0bfe72ab91c1d1044.setContent(html_6b305055635049b2b4fb839aae039d9c);
+        
+
+        circle_marker_58c7dd499b3640c19b3651b45cac1f24.bindPopup(popup_2eee50354a3449a0bfe72ab91c1d1044)
+        ;
+
+        
+    
+    
+            var circle_marker_c5cbbdd4dbe4460f9a7a77393b4faaff = L.circleMarker(
+                [31.462420950000002, 34.262716572130714],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_b62470a39a6848b8bd56e2d3e4c568bd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ec2b35a13ccb41b291e79609877bda92 = $(`<div id="html_ec2b35a13ccb41b291e79609877bda92" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Palestine</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>130              <p style='color:#FC766AFF'>Speed(mbps):</p>14.3                    </body>                     </html>               </div>`)[0];
+            popup_b62470a39a6848b8bd56e2d3e4c568bd.setContent(html_ec2b35a13ccb41b291e79609877bda92);
+        
+
+        circle_marker_c5cbbdd4dbe4460f9a7a77393b4faaff.bindPopup(popup_b62470a39a6848b8bd56e2d3e4c568bd)
+        ;
+
+        
+    
+    
+            var circle_marker_9e0e601706b64c09853a11ff55430366 = L.circleMarker(
+                [31.1728205, -7.3362482],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_28db9aa169894ec897188bffcf6c9007 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_47f3fd753bf24f7082c2bcccf698f110 = $(`<div id="html_47f3fd753bf24f7082c2bcccf698f110" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Morocco</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>132              <p style='color:#FC766AFF'>Speed(mbps):</p>12.78                    </body>                     </html>               </div>`)[0];
+            popup_28db9aa169894ec897188bffcf6c9007.setContent(html_47f3fd753bf24f7082c2bcccf698f110);
+        
+
+        circle_marker_9e0e601706b64c09853a11ff55430366.bindPopup(popup_28db9aa169894ec897188bffcf6c9007)
+        ;
+
+        
+    
+    
+            var circle_marker_60da343ee1cf4f42bafa2853ab1ffa3b = L.circleMarker(
+                [-18.1239696, 179.0122737],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_c487e8b6c44446cba5d22902ada9747e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_13c45469ce104fb9aa37f59af7cc3ac4 = $(`<div id="html_13c45469ce104fb9aa37f59af7cc3ac4" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Fiji</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>133              <p style='color:#FC766AFF'>Speed(mbps):</p>12.27                    </body>                     </html>               </div>`)[0];
+            popup_c487e8b6c44446cba5d22902ada9747e.setContent(html_13c45469ce104fb9aa37f59af7cc3ac4);
+        
+
+        circle_marker_60da343ee1cf4f42bafa2853ab1ffa3b.bindPopup(popup_c487e8b6c44446cba5d22902ada9747e)
+        ;
+
+        
+    
+    
+            var circle_marker_81116e6cd5704e1fa28c5c3274713b74 = L.circleMarker(
+                [-11.8775768, 17.5691241],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_fb1544f80fc6439bb59bd265579ba843 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ecddaa1bc1dc43be845d97d49e0c4d53 = $(`<div id="html_ecddaa1bc1dc43be845d97d49e0c4d53" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Angola</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>134              <p style='color:#FC766AFF'>Speed(mbps):</p>11.97                    </body>                     </html>               </div>`)[0];
+            popup_fb1544f80fc6439bb59bd265579ba843.setContent(html_ecddaa1bc1dc43be845d97d49e0c4d53);
+        
+
+        circle_marker_81116e6cd5704e1fa28c5c3274713b74.bindPopup(popup_fb1544f80fc6439bb59bd265579ba843)
+        ;
+
+        
+    
+    
+            var circle_marker_cf58231fa034472ba3cd320879ec0340 = L.circleMarker(
+                [26.8234472, 18.1236723],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_bfe494b11e7a459ca884c88eb6f12906 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d62afc33a58741cd9b751563ca19abf6 = $(`<div id="html_d62afc33a58741cd9b751563ca19abf6" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Libya</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>136              <p style='color:#FC766AFF'>Speed(mbps):</p>11.0                    </body>                     </html>               </div>`)[0];
+            popup_bfe494b11e7a459ca884c88eb6f12906.setContent(html_d62afc33a58741cd9b751563ca19abf6);
+        
+
+        circle_marker_cf58231fa034472ba3cd320879ec0340.bindPopup(popup_bfe494b11e7a459ca884c88eb6f12906)
+        ;
+
+        
+    
+    
+            var circle_marker_1125b484fa174612af90294fd417affb = L.circleMarker(
+                [4.7064352, 73.3287853],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_57b8fc76292c4bd6ba54a7f71d76a4f8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0cfeabd764b74c228db886ab68514f07 = $(`<div id="html_0cfeabd764b74c228db886ab68514f07" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Maldives</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>137              <p style='color:#FC766AFF'>Speed(mbps):</p>10.97                    </body>                     </html>               </div>`)[0];
+            popup_57b8fc76292c4bd6ba54a7f71d76a4f8.setContent(html_0cfeabd764b74c228db886ab68514f07);
+        
+
+        circle_marker_1125b484fa174612af90294fd417affb.bindPopup(popup_57b8fc76292c4bd6ba54a7f71d76a4f8)
+        ;
+
+        
+    
+    
+            var circle_marker_37a8472de7984400a48de4c71c0aa03b = L.circleMarker(
+                [32.6475314, 54.5643516],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_374a82f94b3b4a5ab26e3a86a5609e91 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_da8c16bd4edf42b0943e55a055805a5e = $(`<div id="html_da8c16bd4edf42b0943e55a055805a5e" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Iran</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>141              <p style='color:#FC766AFF'>Speed(mbps):</p>10.39                    </body>                     </html>               </div>`)[0];
+            popup_374a82f94b3b4a5ab26e3a86a5609e91.setContent(html_da8c16bd4edf42b0943e55a055805a5e);
+        
+
+        circle_marker_37a8472de7984400a48de4c71c0aa03b.bindPopup(popup_374a82f94b3b4a5ab26e3a86a5609e91)
+        ;
+
+        
+    
+    
+            var circle_marker_60c36f8a842e489f9c3b2d32880d57e4 = L.circleMarker(
+                [9.6000359, 7.9999721],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_427b38ff52af47fc9fdd9cb32be269ed = L.popup({"maxWidth": "100%"});
+
+        
+            var html_407e1047bf7f45baa9b67f538bbb7ce8 = $(`<div id="html_407e1047bf7f45baa9b67f538bbb7ce8" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Nigeria</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>142              <p style='color:#FC766AFF'>Speed(mbps):</p>10.06                    </body>                     </html>               </div>`)[0];
+            popup_427b38ff52af47fc9fdd9cb32be269ed.setContent(html_407e1047bf7f45baa9b67f538bbb7ce8);
+        
+
+        circle_marker_60c36f8a842e489f9c3b2d32880d57e4.bindPopup(popup_427b38ff52af47fc9fdd9cb32be269ed)
+        ;
+
+        
+    
+    
+            var circle_marker_ecfb512b7894486f9c7cb783d334e8aa = L.circleMarker(
+                [28.0000272, 2.9999825],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_832ae534160e4704998d19d3c97610f8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_15de4e64ebde4d78b1f77566d3db8904 = $(`<div id="html_15de4e64ebde4d78b1f77566d3db8904" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Algeria</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>144              <p style='color:#FC766AFF'>Speed(mbps):</p>9.72                    </body>                     </html>               </div>`)[0];
+            popup_832ae534160e4704998d19d3c97610f8.setContent(html_15de4e64ebde4d78b1f77566d3db8904);
+        
+
+        circle_marker_ecfb512b7894486f9c7cb783d334e8aa.bindPopup(popup_832ae534160e4704998d19d3c97610f8)
+        ;
+
+        
+    
+    
+            var circle_marker_e047ad29162b4b0a92590888d9a6b8e6 = L.circleMarker(
+                [1.5333554, 32.2166578],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_1a46576772814c5a81f3af2a277ce136 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a5a5c594ef9440b3972eb5f679b9e4c1 = $(`<div id="html_a5a5c594ef9440b3972eb5f679b9e4c1" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Uganda</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>145              <p style='color:#FC766AFF'>Speed(mbps):</p>9.57                    </body>                     </html>               </div>`)[0];
+            popup_1a46576772814c5a81f3af2a277ce136.setContent(html_a5a5c594ef9440b3972eb5f679b9e4c1);
+        
+
+        circle_marker_e047ad29162b4b0a92590888d9a6b8e6.bindPopup(popup_1a46576772814c5a81f3af2a277ce136)
+        ;
+
+        
+    
+    
+            var circle_marker_bb329e83ac744cbb8663385901f547d7 = L.circleMarker(
+                [-6.5247123, 35.7878438],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_1fca9e76ba45470d8698b725d6d6c0ad = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7cf26fbc7fb74d52b03b157e6b5cca3b = $(`<div id="html_7cf26fbc7fb74d52b03b157e6b5cca3b" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Tanzania</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>148              <p style='color:#FC766AFF'>Speed(mbps):</p>9.45                    </body>                     </html>               </div>`)[0];
+            popup_1fca9e76ba45470d8698b725d6d6c0ad.setContent(html_7cf26fbc7fb74d52b03b157e6b5cca3b);
+        
+
+        circle_marker_bb329e83ac744cbb8663385901f547d7.bindPopup(popup_1fca9e76ba45470d8698b725d6d6c0ad)
+        ;
+
+        
+    
+    
+            var circle_marker_6e2e5c0fa2fb4cd8b30c332f9a9885c2 = L.circleMarker(
+                [30.3308401, 71.247499],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_e8dc0888509043898a49fa224f8c3f17 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a9d7c90fd4e448a5971497dc7758dc4b = $(`<div id="html_a9d7c90fd4e448a5971497dc7758dc4b" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Pakistan</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>151              <p style='color:#FC766AFF'>Speed(mbps):</p>9.12                    </body>                     </html>               </div>`)[0];
+            popup_e8dc0888509043898a49fa224f8c3f17.setContent(html_a9d7c90fd4e448a5971497dc7758dc4b);
+        
+
+        circle_marker_6e2e5c0fa2fb4cd8b30c332f9a9885c2.bindPopup(popup_e8dc0888509043898a49fa224f8c3f17)
+        ;
+
+        
+    
+    
+            var circle_marker_d1fb797cc0cb4231b351b7a2db9f97d8 = L.circleMarker(
+                [4.6125522, 13.1535811],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_4370793cd34f4f93a5e40d5ac2b501bc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6452232645b546b68534c52b0f5ad672 = $(`<div id="html_6452232645b546b68534c52b0f5ad672" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Cameroon</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>152              <p style='color:#FC766AFF'>Speed(mbps):</p>9.04                    </body>                     </html>               </div>`)[0];
+            popup_4370793cd34f4f93a5e40d5ac2b501bc.setContent(html_6452232645b546b68534c52b0f5ad672);
+        
+
+        circle_marker_d1fb797cc0cb4231b351b7a2db9f97d8.bindPopup(popup_4370793cd34f4f93a5e40d5ac2b501bc)
+        ;
+
+        
+    
+    
+            var circle_marker_6b0bbb59475f41938e98e6bb0348fea0 = L.circleMarker(
+                [1.4419683, 38.4313975],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_e845d22055f44f83ab1c42de3d3c4dc9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_20b7eca0252549f598f1aa2f9061d0aa = $(`<div id="html_20b7eca0252549f598f1aa2f9061d0aa" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Kenya</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>153              <p style='color:#FC766AFF'>Speed(mbps):</p>8.91                    </body>                     </html>               </div>`)[0];
+            popup_e845d22055f44f83ab1c42de3d3c4dc9.setContent(html_20b7eca0252549f598f1aa2f9061d0aa);
+        
+
+        circle_marker_6b0bbb59475f41938e98e6bb0348fea0.bindPopup(popup_e845d22055f44f83ab1c42de3d3c4dc9)
+        ;
+
+        
+    
+    
+            var circle_marker_65dd6285156145d8bcf265e7376c4bda = L.circleMarker(
+                [-23.2335499, 17.3231107],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_cbeb2b5a00b44c9490387030ed0f80c1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_66726453488e4e8ba2207bea98444eb8 = $(`<div id="html_66726453488e4e8ba2207bea98444eb8" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Namibia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>156              <p style='color:#FC766AFF'>Speed(mbps):</p>8.29                    </body>                     </html>               </div>`)[0];
+            popup_cbeb2b5a00b44c9490387030ed0f80c1.setContent(html_66726453488e4e8ba2207bea98444eb8);
+        
+
+        circle_marker_65dd6285156145d8bcf265e7376c4bda.bindPopup(popup_cbeb2b5a00b44c9490387030ed0f80c1)
+        ;
+
+        
+    
+    
+            var circle_marker_721c8aca371b4b97b2d030c78e29b203 = L.circleMarker(
+                [33.8439408, 9.400138],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_2852d37694b34af69115bd555ca62d49 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bffe068373ad468b84c2bc869d86aa02 = $(`<div id="html_bffe068373ad468b84c2bc869d86aa02" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Tunisia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>158              <p style='color:#FC766AFF'>Speed(mbps):</p>7.64                    </body>                     </html>               </div>`)[0];
+            popup_2852d37694b34af69115bd555ca62d49.setContent(html_bffe068373ad468b84c2bc869d86aa02);
+        
+
+        circle_marker_721c8aca371b4b97b2d030c78e29b203.bindPopup(popup_2852d37694b34af69115bd555ca62d49)
+        ;
+
+        
+    
+    
+            var circle_marker_0391a114e5b24521ba84e7588647f77b = L.circleMarker(
+                [33.8750629, 35.843409],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_68e955d0fd3c4a449abd3c023e709d8f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0b1a4f17a97a49d8ae71a1f3c50cb9d2 = $(`<div id="html_0b1a4f17a97a49d8ae71a1f3c50cb9d2" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Lebanon</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>159              <p style='color:#FC766AFF'>Speed(mbps):</p>7.27                    </body>                     </html>               </div>`)[0];
+            popup_68e955d0fd3c4a449abd3c023e709d8f.setContent(html_0b1a4f17a97a49d8ae71a1f3c50cb9d2);
+        
+
+        circle_marker_0391a114e5b24521ba84e7588647f77b.bindPopup(popup_68e955d0fd3c4a449abd3c023e709d8f)
+        ;
+
+        
+    
+    
+            var circle_marker_f4cca1ddf4d54fc4abb7fc1bcc628df8 = L.circleMarker(
+                [-23.1681782, 24.5928742],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_975b4443a7664f86bdbd4eb1984de2bf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aefe8fa857e9471e9501b0f5a3cc7cd7 = $(`<div id="html_aefe8fa857e9471e9501b0f5a3cc7cd7" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Botswana</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>160              <p style='color:#FC766AFF'>Speed(mbps):</p>7.22                    </body>                     </html>               </div>`)[0];
+            popup_975b4443a7664f86bdbd4eb1984de2bf.setContent(html_aefe8fa857e9471e9501b0f5a3cc7cd7);
+        
+
+        circle_marker_f4cca1ddf4d54fc4abb7fc1bcc628df8.bindPopup(popup_975b4443a7664f86bdbd4eb1984de2bf)
+        ;
+
+        
+    
+    
+            var circle_marker_844d1d52c4034049a9676bcf38fd7ab1 = L.circleMarker(
+                [8.0018709, -66.1109318],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_e20d073d39264f928834d74482a45a9f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4a92e4dd4bc3407ab6a3265d5a15e594 = $(`<div id="html_4a92e4dd4bc3407ab6a3265d5a15e594" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Venezuela</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>161              <p style='color:#FC766AFF'>Speed(mbps):</p>7.15                    </body>                     </html>               </div>`)[0];
+            popup_e20d073d39264f928834d74482a45a9f.setContent(html_4a92e4dd4bc3407ab6a3265d5a15e594);
+        
+
+        circle_marker_844d1d52c4034049a9676bcf38fd7ab1.bindPopup(popup_e20d073d39264f928834d74482a45a9f)
+        ;
+
+        
+    
+    
+            var circle_marker_a3491926c5ee435188384d3407ee6435 = L.circleMarker(
+                [8.3676771, 49.083416],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_dbe3591d9752467ebe96b1f1a9f63f74 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_38388ebf177b427fa3d691bae9dadfbf = $(`<div id="html_38388ebf177b427fa3d691bae9dadfbf" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Somalia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>162              <p style='color:#FC766AFF'>Speed(mbps):</p>6.78                    </body>                     </html>               </div>`)[0];
+            popup_dbe3591d9752467ebe96b1f1a9f63f74.setContent(html_38388ebf177b427fa3d691bae9dadfbf);
+        
+
+        circle_marker_a3491926c5ee435188384d3407ee6435.bindPopup(popup_dbe3591d9752467ebe96b1f1a9f63f74)
+        ;
+
+        
+    
+    
+            var circle_marker_9d673977e35f4776b4cfea246a890c91 = L.circleMarker(
+                [-19.302233, 34.9144977],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_71aa7ba1f2ce42468619c67b8e0ee9cd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a8a3f35de829496b923ed40caf69e517 = $(`<div id="html_a8a3f35de829496b923ed40caf69e517" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Mozambique</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>163              <p style='color:#FC766AFF'>Speed(mbps):</p>6.23                    </body>                     </html>               </div>`)[0];
+            popup_71aa7ba1f2ce42468619c67b8e0ee9cd.setContent(html_a8a3f35de829496b923ed40caf69e517);
+        
+
+        circle_marker_9d673977e35f4776b4cfea246a890c91.bindPopup(popup_71aa7ba1f2ce42468619c67b8e0ee9cd)
+        ;
+
+        
+    
+    
+            var circle_marker_ee597076207f48769490343f0bcdae1f = L.circleMarker(
+                [-18.4554963, 29.7468414],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_e760c71ed92244f9b64c938544809952 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_89c73453b8344047b1e6e24706bb6905 = $(`<div id="html_89c73453b8344047b1e6e24706bb6905" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Zimbabwe</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>167              <p style='color:#FC766AFF'>Speed(mbps):</p>5.21                    </body>                     </html>               </div>`)[0];
+            popup_e760c71ed92244f9b64c938544809952.setContent(html_89c73453b8344047b1e6e24706bb6905);
+        
+
+        circle_marker_ee597076207f48769490343f0bcdae1f.bindPopup(popup_e760c71ed92244f9b64c938544809952)
+        ;
+
+        
+    
+    
+            var circle_marker_32bb95a7cd404c958df270842b6d0817 = L.circleMarker(
+                [-14.5189121, 27.5589884],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_d217215d2b914af4b1548c517424a41a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d1853bc89dd3437b92b4969d0d350986 = $(`<div id="html_d1853bc89dd3437b92b4969d0d350986" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Zambia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>170              <p style='color:#FC766AFF'>Speed(mbps):</p>4.6                    </body>                     </html>               </div>`)[0];
+            popup_d217215d2b914af4b1548c517424a41a.setContent(html_d1853bc89dd3437b92b4969d0d350986);
+        
+
+        circle_marker_32bb95a7cd404c958df270842b6d0817.bindPopup(popup_d217215d2b914af4b1548c517424a41a)
+        ;
+
+        
+    
+    
+            var circle_marker_a341cfb241294c8f84d0cc3cbbeb661b = L.circleMarker(
+                [14.5844444, 29.4917691],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_c37ab9d40465475792eb1a6252a651bc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fe9590eb733a4a0cb2e2edac4127e1f9 = $(`<div id="html_fe9590eb733a4a0cb2e2edac4127e1f9" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Sudan</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>173              <p style='color:#FC766AFF'>Speed(mbps):</p>3.28                    </body>                     </html>               </div>`)[0];
+            popup_c37ab9d40465475792eb1a6252a651bc.setContent(html_fe9590eb733a4a0cb2e2edac4127e1f9);
+        
+
+        circle_marker_a341cfb241294c8f84d0cc3cbbeb661b.bindPopup(popup_c37ab9d40465475792eb1a6252a651bc)
+        ;
+
+        
+    
+    
+            var circle_marker_08a6ed4c05bb41c9a6121440e26de3da = L.circleMarker(
+                [34.6401861, 39.0494106],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_88396f1c2faa4c0babcd237fc710f1bd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fd116ac315bf4b21bfdd05b0a0e5126c = $(`<div id="html_fd116ac315bf4b21bfdd05b0a0e5126c" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Syria</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>174              <p style='color:#FC766AFF'>Speed(mbps):</p>2.87                    </body>                     </html>               </div>`)[0];
+            popup_88396f1c2faa4c0babcd237fc710f1bd.setContent(html_fd116ac315bf4b21bfdd05b0a0e5126c);
+        
+
+        circle_marker_08a6ed4c05bb41c9a6121440e26de3da.bindPopup(popup_88396f1c2faa4c0babcd237fc710f1bd)
+        ;
+
+        
+    
+    
+            var circle_marker_1d0b0871969b4314bc5a40fb968e8185 = L.circleMarker(
+                [16.3471243, 47.8915271],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_3448b4e2f2ad4d918ca488a632d252a6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b5b788b83e3d472fa216ba23875f4a7e = $(`<div id="html_b5b788b83e3d472fa216ba23875f4a7e" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Yemen</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>175              <p style='color:#FC766AFF'>Speed(mbps):</p>2.74                    </body>                     </html>               </div>`)[0];
+            popup_3448b4e2f2ad4d918ca488a632d252a6.setContent(html_b5b788b83e3d472fa216ba23875f4a7e);
+        
+
+        circle_marker_1d0b0871969b4314bc5a40fb968e8185.bindPopup(popup_3448b4e2f2ad4d918ca488a632d252a6)
+        ;
+
+        
+    
+    
+            var circle_marker_0b6b4c3759b842d083030ac7234056b1 = L.circleMarker(
+                [10.2116702, 38.6521203],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_b337a7691f4a47c59dfb76f6adf56a33 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5ed6a27638c049c1898ebf9ff5ae549b = $(`<div id="html_5ed6a27638c049c1898ebf9ff5ae549b" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Ethiopia</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>176              <p style='color:#FC766AFF'>Speed(mbps):</p>2.69                    </body>                     </html>               </div>`)[0];
+            popup_b337a7691f4a47c59dfb76f6adf56a33.setContent(html_5ed6a27638c049c1898ebf9ff5ae549b);
+        
+
+        circle_marker_0b6b4c3759b842d083030ac7234056b1.bindPopup(popup_b337a7691f4a47c59dfb76f6adf56a33)
+        ;
+
+        
+    
+    
+            var circle_marker_edefdb0841f144d4b7fdde94a6252faf = L.circleMarker(
+                [23.0131338, -80.8328748],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_9357754bff404852abf40d8e3a3cd033 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8ec2656e4691439ea0603198b437b345 = $(`<div id="html_8ec2656e4691439ea0603198b437b345" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Cuba</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>177              <p style='color:#FC766AFF'>Speed(mbps):</p>1.9                    </body>                     </html>               </div>`)[0];
+            popup_9357754bff404852abf40d8e3a3cd033.setContent(html_8ec2656e4691439ea0603198b437b345);
+        
+
+        circle_marker_edefdb0841f144d4b7fdde94a6252faf.bindPopup(popup_9357754bff404852abf40d8e3a3cd033)
+        ;
+
+        
+    
+    
+            var circle_marker_846851c0b5b04358b43efb0dacb9a426 = L.circleMarker(
+                [39.3763807, 59.3924609],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_1a3ee11294f946818fc3c657f6d59e87 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4523cce4332542fba7b0051569e9e4f8 = $(`<div id="html_4523cce4332542fba7b0051569e9e4f8" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Turkmenistan</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>178              <p style='color:#FC766AFF'>Speed(mbps):</p>1.89                    </body>                     </html>               </div>`)[0];
+            popup_1a3ee11294f946818fc3c657f6d59e87.setContent(html_4523cce4332542fba7b0051569e9e4f8);
+        
+
+        circle_marker_846851c0b5b04358b43efb0dacb9a426.bindPopup(popup_1a3ee11294f946818fc3c657f6d59e87)
+        ;
+
+        
+    
+    
+            var circle_marker_55909d78b1e8420091fcfdee8a4ea733 = L.circleMarker(
+                [33.7680065, 66.2385139],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3f1954c8b41740c5ab7b3ab349d68c74);
+        
+    
+        var popup_d9cfe05cc65b477c9b4a0f7795f4d86e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fbf5cda3b1f542daa9a5c1a1a4c0a62a = $(`<div id="html_fbf5cda3b1f542daa9a5c1a1a4c0a62a" style="width: 100.0%; height: 100.0%;"><!DOCTYPE html> <html>            <head style='background-color:#949398FF'>         <h1 style='font-size:30px;color:#5B84B1FF'>Afghanistan</h1>     </head>     <body >              <p style='color:#FC766AFF'>Rank:</p>179              <p style='color:#FC766AFF'>Speed(mbps):</p>1.62                    </body>                     </html>               </div>`)[0];
+            popup_d9cfe05cc65b477c9b4a0f7795f4d86e.setContent(html_fbf5cda3b1f542daa9a5c1a1a4c0a62a);
+        
+
+        circle_marker_55909d78b1e8420091fcfdee8a4ea733.bindPopup(popup_d9cfe05cc65b477c9b4a0f7795f4d86e)
+        ;
+
+        
+    
+</script>
